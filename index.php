@@ -6,8 +6,11 @@
     /*  Page principal de l'application  */
     /*                                   */
     /*-----------------------------------*/
+?>
 
-
+<?php
+    include_once('./class/include.class.php');
+    include_once('./php/connexion_sql.php');
 ?>
 
 <!DOCTYPE html>
