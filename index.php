@@ -9,8 +9,12 @@
 ?>
 
 <?php
+    //Intégration des Fichiers de classes
     include_once('./class/include.class.php');
     include_once('./php/connexion_sql.php');
+
+    //Intégration des Fonctions traitées au démarrage
+    include('./php/demarrage.php');
 ?>
 
 <!DOCTYPE html>

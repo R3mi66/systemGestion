@@ -15,7 +15,7 @@
 		private $idsousgroupe;
 		private $idgroupe;
 		private $nomsousgroupe;
-		private $onglet
+		private $onglet;
 
 		/*-------------------*/
 		/*    Constructeur   */
@@ -86,7 +86,7 @@
 			if (($nomSousGroupe != '') and (preg_match('#[^a-zA-Z]#', $idGroupe)))
 			{
 				//Requête de récupération des données
-				$base->query('INSERT INTO sousgroupe (idgroupe, nomsousgroupe, onglet) VALUES (\'' . $idGroupe . '\', \'' . htmlspecialchars($this->nomSousGroupe) . '\', '0')');
+				$base->query('INSERT INTO sousgroupe (idgroupe, nomsousgroupe, onglet) VALUES (\'' . $idGroupe . '\', \'' . htmlspecialchars($this->nomSousGroupe) . '\', 0)');
 			}
 			else
 			{
