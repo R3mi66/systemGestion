@@ -109,7 +109,7 @@
 			}
 		}
 
-		//Mise à jour d'un groupe
+		//Mise à jour d'un sous-groupe
 		public function updateSousGroupe($idSousGroupe, $idGroupe, $nomSousGroupe, $onglet){
 			global $base;
 
@@ -124,7 +124,7 @@
 			}
 		}
 
-		//Fiche d'un groupe
+		//Fiche d'un sous-groupe
 		public function recupDonneeSousGroupe($idSousGroupe)
 		{
 			global $base;
@@ -146,7 +146,7 @@
 			$reponse->closeCursor();
 		}
 
-		//Liste complète des groupes
+		//Liste complète des sous-groupes
 		public function listeCompleteSousGroupe()
 		{
 			global $base;
