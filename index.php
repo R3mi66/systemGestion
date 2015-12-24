@@ -13,6 +13,9 @@
     include_once('./class/include.class.php');
     include_once('./php/connexion_sql.php');
 
+    //Intégration de fonctions annexes au serveur
+    include_once('./php/creation_table_cyclique.php');
+
     //Intégration des Fonctions traitées au démarrage
     include('./php/demarrage.php');
 ?>

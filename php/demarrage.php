@@ -19,26 +19,26 @@
 	//Traitement des données
 	$day = date("d");
 	$month = date("m");
-  	$year = date("Y");
+	$year = date("Y");
 
-  	if($xml->datetime->year != $year)
-  	{
-    	$xml->datetime->year = $year;
-    }
+	if($xml->datetime->year != $year)
+	{
+  	$xml->datetime->year = $year;
+  }
 
-    if($xml->datetime->month != $month)
-  	{
-    	$xml->datetime->month = $month;
-    }
+  if($xml->datetime->month != $month)
+	{
+  	$xml->datetime->month = $month;
+  }
 
-    if($xml->datetime->day != $day)
-  	{
-    	$xml->datetime->day = $day;
-    }
+  if($xml->datetime->day != $day)
+	{
+  	$xml->datetime->day = $day;
+  }
 
-    //Sauvegarde des modifications du fichier d'option
-    $fe = fopen("./xml/option.xml", "w+" );
-  	fwrite($fe, $xml->saveXML(), strlen($xml->saveXML()));
-  
-  	fclose($fe);
+  //Sauvegarde des modifications du fichier d'option
+  $fe = fopen("./xml/option.xml", "w+" );
+	fwrite($fe, $xml->saveXML(), strlen($xml->saveXML()));
+
+	fclose($fe);
 ?>

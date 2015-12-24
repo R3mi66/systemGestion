@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="windows-1250"?>
 <CYCLIQUE>
 	<!-- Barrage de Vinça -->
-	<intervention>Essai Sonore Réseau Alerte<ouvrage>Vinca</ouvrage><cycle>Trimestriel</cycle>/intervention>
+	<intervention>Essai Sonore Réseau Alerte<ouvrage>Vinca</ouvrage><cycle>Trimestriel</cycle></intervention>
 	<intervention>Essai Non Sonore Réseau Alerte<ouvrage>Vinca</ouvrage><cycle>2mois/3</cycle></intervention>
 	<intervention>Visite d'Ouvrage<ouvrage>Vinca</ouvrage><cycle>Hebdomadaire</cycle></intervention>
 	<intervention>Essai Groupe Electrogene Fixe<ouvrage>Vinca</ouvrage><cycle>Hebdomadaire</cycle></intervention>
@@ -55,7 +55,7 @@
 	<intervention>Nettoyage Local Groupe Electrogène<ouvrage>Agly</ouvrage><cycle>Annuel</cycle></intervention>
 	<intervention>Taille Repousse Peupliers<ouvrage>Agly</ouvrage><cycle>Annuel</cycle></intervention>
 	<intervention>Désherbage Joint Evacuateur<ouvrage>Agly</ouvrage><cycle>Annuel</cycle></intervention>
-	<intervention>Visite Berge en Bateau<ouvrage>Agly</ouvrage><cycle>Annuel</cycle>/intervention>
+	<intervention>Visite Berge en Bateau<ouvrage>Agly</ouvrage><cycle>Annuel</cycle></intervention>
 	<intervention>Nettoyage Cuillères Evacuateur<ouvrage>Agly</ouvrage><cycle>Annuel</cycle></intervention>
 	<intervention>Contrôle Visée Topo<ouvrage>Agly</ouvrage><cycle>Semestriel</cycle></intervention>
 	<intervention>Nettoyage Local Exploitation<ouvrage>Agly</ouvrage><cycle>Mensuel</cycle></intervention>
