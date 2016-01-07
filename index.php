@@ -30,6 +30,6 @@
 
     <!--Corps de la page-->
     <body>
-        
+        <?php include_once('./php/affichage.php'); ?>
     </body>
 </html>

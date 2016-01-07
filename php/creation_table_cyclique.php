@@ -15,8 +15,13 @@
 
     //Année en cours
     $year = date("Y");
+
     //Nombre de semaine dans l'année
     $nbresemaine = date("W", mktime(0,0,0,12,28,$year));
+
+    //Définition des semaines de début et fin de campagne d'irrigation
+    $debutcampagne = date("W", mktime(0,0,0,04,01,$year));
+    $fincampagne = date("W", mktime(0,0,0,10,30,$year));
 
     //Fonction de calcul de la date du lundi et vendredi de chaque semaine de l'année
     function get_monday_friday_week($week, $year, $format = "Y-m-d")
@@ -100,8 +105,17 @@
                     break;
 
                 case 'Saisonnier':
-                    echo '5';
-                    echo '<br>';
+                    for ($i = $debutcampagne; $i < $fincampagne+1; $i++){
+                        //Thuir
+                        $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'Visite Mascareil - Semaine ' . $i . ' - ' . $intervention->ouvrage . '\', \'' . $retour[0] . ' 00:00:00\', \'' . $retour[1]  . ' 23:59:59\', NULL, NULL)');
+                        $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'Visite Camelas - Semaine ' . $i . ' - ' . $intervention->ouvrage . '\', \'' . $retour[0] . ' 00:00:00\', \'' . $retour[1]  . ' 23:59:59\', NULL, NULL)');
+                        //Rivesaltes
+                        $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'Visite Rivesaltes - Semaine ' . $i . ' - ' . $intervention->ouvrage . '\', \'' . $retour[0] . ' 00:00:00\', \'' . $retour[1]  . ' 23:59:59\', NULL, NULL)');
+                        //Espira de l'Agly
+                       $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'Visite Espira - Semaine ' . $i . ' - ' . $intervention->ouvrage . '\', \'' . $retour[0] . ' 00:00:00\', \'' . $retour[1]  . ' 23:59:59\', NULL, NULL)');
+                        //Latour de France
+                        $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'Visite Latour de France - Semaine ' . $i . ' - ' . $intervention->ouvrage . '\', \'' . $retour[0] . ' 00:00:00\', \'' . $retour[1]  . ' 23:59:59\', NULL, NULL)');
+                    }
                     break;
 
                 case 'Semestriel':
