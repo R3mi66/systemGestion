@@ -13,7 +13,10 @@
 <?php
 	global $base;
 
+    //Année en cours
     $year = date("Y");
+    //Nombre de semaine dans l'année
+    $nbresemaine = date("W", mktime(0,0,0,12,28,$year));
 
     //Fonction de calcul de la date du lundi et vendredi de chaque semaine de l'année
     function get_monday_friday_week($week, $year, $format = "Y-m-d")
@@ -34,12 +37,6 @@
         $timestamp_vendredi = mktime(0, 0, 0, 1, 5, $year) + $weekInSeconds + $shift;
 
         return array(date($format, $timestamp_lundi), date($format, $timestamp_vendredi));
-    }
-
-    //Fonction permettant de connaitre le nombre de semaine dans une année donnée
-    function number_week()
-    {
-        
     }
 
 	//Requête de récupération des données
@@ -80,14 +77,26 @@
                     break;
 
                 case 'Hebdomadaire':
-                    $retour = get_monday_friday_week(45, 2015);
-                    echo "Lundi : " . $retour[0] . " et Vendredi : " . $retour[1];
-                    echo '<br>';
+                    for ($i = 1; $i < $nbresemaine+1; $i++){
+                        $retour = get_monday_friday_week($i, $year);
+                        
+                        $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Semaine ' . $i . ' - ' . $intervention->ouvrage . '\', \'' . $retour[0] . ' 00:00:00\', \'' . $retour[1]  . ' 23:59:59\', NULL, NULL)');
+                    }
                     break;
 
                 case 'Mensuel':
-                    echo '4';
-                    echo '<br>';
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Janvier - ' . $intervention->ouvrage . '\', \'' . $year . '-01-01 00:00:00\', \'' . $year . '-01-31 23:59:59\', NULL, NULL)');
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Février - ' . $intervention->ouvrage . '\', \'' . $year . '-02-01 00:00:00\', \'' . $year . '-02-28 23:59:59\', NULL, NULL)');
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Mars - ' . $intervention->ouvrage . '\', \'' . $year . '-03-01 00:00:00\', \'' . $year . '-03-31 23:59:59\', NULL, NULL)');
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Avril - ' . $intervention->ouvrage . '\', \'' . $year . '-04-01 00:00:00\', \'' . $year . '-04-30 23:59:59\', NULL, NULL)');
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Mai - ' . $intervention->ouvrage . '\', \'' . $year . '-05-01 00:00:00\', \'' . $year . '-05-31 23:59:59\', NULL, NULL)');
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Juin - ' . $intervention->ouvrage . '\', \'' . $year . '-06-01 00:00:00\', \'' . $year . '-06-30 23:59:59\', NULL, NULL)');
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Juillet - ' . $intervention->ouvrage . '\', \'' . $year . '-07-01 00:00:00\', \'' . $year . '-07-31 23:59:59\', NULL, NULL)');
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Aout - ' . $intervention->ouvrage . '\', \'' . $year . '-08-01 00:00:00\', \'' . $year . '-08-31 23:59:59\', NULL, NULL)');
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Septembre - ' . $intervention->ouvrage . '\', \'' . $year . '-09-01 00:00:00\', \'' . $year . '-09-30 23:59:59\', NULL, NULL)');
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Octobre - ' . $intervention->ouvrage . '\', \'' . $year . '-10-01 00:00:00\', \'' . $year . '-10-31 23:59:59\', NULL, NULL)');
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Novembre - ' . $intervention->ouvrage . '\', \'' . $year . '-11-01 00:00:00\', \'' . $year . '-11-30 23:59:59\', NULL, NULL)');
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Decembre - ' . $intervention->ouvrage . '\', \'' . $year . '-12-01 00:00:00\', \'' . $year . '-12-31 23:59:59\', NULL, NULL)');
                     break;
 
                 case 'Saisonnier':
@@ -96,78 +105,70 @@
                     break;
 
                 case 'Semestriel':
-                    echo '6';
-                    echo '<br>';
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - 1er Semestre - ' . $intervention->ouvrage . '\', \'' . $year . '-01-01 00:00:00\', \'' . $year . '-06-30 23:59:59\', NULL, NULL)');
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - 2eme Semestre - ' . $intervention->ouvrage . '\', \'' . $year . '-07-01 00:00:00\', \'' . $year . '-12-31 23:59:59\', NULL, NULL)');
                     break;
 
                 case 'Annuel':
-                    echo '7';
-                    echo '<br>';
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Année ' . $year . ' - ' . $intervention->ouvrage . '\', \'' . $year . '-01-01 00:00:00\', \'' . $year . '-12-10 23:59:59\', NULL, NULL)');
                     break;
 
                 case 'Janvier':
-                    echo '8';
-                    echo '<br>';
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Année ' . $year . ' - ' . $intervention->ouvrage . '\', \'' . $year . '-01-01 00:00:00\', \'' . $year . '-01-31 23:59:59\', NULL, NULL)');
                     break;
 
                 case 'Fevrier':
-                    echo '8';
-                    echo '<br>';
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Année ' . $year . ' - ' . $intervention->ouvrage . '\', \'' . $year . '-02-01 00:00:00\', \'' . $year . '-02-28 23:59:59\', NULL, NULL)');
                     break;
 
                 case 'Mars':
-                    echo '8';
-                    echo '<br>';
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Année ' . $year . ' - ' . $intervention->ouvrage . '\', \'' . $year . '-03-01 00:00:00\', \'' . $year . '-03-31 23:59:59\', NULL, NULL)');
                     break;
 
                 case 'Avril':
-                    echo '8';
-                    echo '<br>';
+                   $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Année ' . $year . ' - ' . $intervention->ouvrage . '\', \'' . $year . '-04-01 00:00:00\', \'' . $year . '-04-30 23:59:59\', NULL, NULL)');
                     break;
 
                 case 'Mai':
-                    echo '8';
-                    echo '<br>';
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Année ' . $year . ' - ' . $intervention->ouvrage . '\', \'' . $year . '-05-01 00:00:00\', \'' . $year . '-05-31 23:59:59\', NULL, NULL)');
                     break;
 
                 case 'Juin':
-                    echo '8';
-                    echo '<br>';
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Année ' . $year . ' - ' . $intervention->ouvrage . '\', \'' . $year . '-06-01 00:00:00\', \'' . $year . '-06-30 23:59:59\', NULL, NULL)');
                     break;
 
                 case 'Juillet':
-                    echo '8';
-                    echo '<br>';
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Année ' . $year . ' - ' . $intervention->ouvrage . '\', \'' . $year . '-07-01 00:00:00\', \'' . $year . '-07-31 23:59:59\', NULL, NULL)');
                     break;
 
                 case 'Aout':
-                    echo '8';
-                    echo '<br>';
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Année ' . $year . ' - ' . $intervention->ouvrage . '\', \'' . $year . '-08-01 00:00:00\', \'' . $year . '-08-31 23:59:59\', NULL, NULL)');
                     break;
 
                 case 'Septembre':
-                    echo '8';
-                    echo '<br>';
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Année ' . $year . ' - ' . $intervention->ouvrage . '\', \'' . $year . '-09-01 00:00:00\', \'' . $year . '-09-30 23:59:59\', NULL, NULL)');
                     break;
 
                 case 'Octobre':
-                    echo '8';
-                    echo '<br>';
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Année ' . $year . ' - ' . $intervention->ouvrage . '\', \'' . $year . '-10-01 00:00:00\', \'' . $year . '-10-31 23:59:59\', NULL, NULL)');
                     break;
 
                 case 'Novembre':
-                    echo '8';
-                    echo '<br>';
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Année ' . $year . ' - ' . $intervention->ouvrage . '\', \'' . $year . '-11-01 00:00:00\', \'' . $year . '-11-30 23:59:59\', NULL, NULL)');
                     break;
 
                 case 'Decembre':
-                    echo '8';
-                    echo '<br>';
+                    $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Année ' . $year . ' - ' . $intervention->ouvrage . '\', \'' . $year . '-12-01 00:00:00\', \'' . $year . '-12-31 23:59:59\', NULL, NULL)');
                     break;
 
                 case '1semaine/2':
-                    echo '1';
-                    echo '<br>';
+                    for ($i = 1; $i < $nbresemaine+1; $i++){
+                        if ( $i%2 == 0 ){
+                            $retour = get_monday_friday_week($i, $year);
+                            
+                            $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Semaine ' . $i . ' - ' . $intervention->ouvrage . '\', \'' . $retour[0] . ' 00:00:00\', \'' . $retour[1]  . ' 23:59:59\', NULL, NULL)');
+                        }
+                    }
                     break;
                  
                 default:
