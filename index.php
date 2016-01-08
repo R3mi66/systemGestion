@@ -26,6 +26,9 @@
     <head>
         <meta charset="utf-8" />
         <title>Système de gestion des interventions systématiques</title>
+
+        <!-- Feuille de style -->
+        <link rel="stylesheet" href="./css/style.css" />
     </head>
 
     <!--Corps de la page-->

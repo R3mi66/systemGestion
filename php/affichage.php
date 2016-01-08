@@ -12,22 +12,35 @@
 <?php
 	global $base;
 
-	$reponse = $base->query('SELECT nomtache, datemaxtache FROM tache_2016 WHERE datetache <= CURDATE()');
+	$year = date("Y");
+	$now = date("Y-m-d H:i:s");
+
+	if ( isset($_GET['idtache']) )
+	{
+		$base->query('UPDATE tache_' . $year . ' SET daterealisationtache = \'' . $now . '\' WHERE idtache=\'' . $_GET['idtache'] . '\'');
+	}
+
+	$reponse = $base->query('SELECT idtache, nomtache, datemaxtache FROM tache_' . $year . ' WHERE datetache <= CURDATE() AND daterealisationtache IS NULL ORDER BY datemaxtache');
 	
 	echo '<div id=\'admin\'>';
-		echo "<form name='search' action='./admin_post.php' method='POST'>";
 		echo '<table>';
 			echo '<thead><tr><th>Tache</th></tr>';
 			echo '<tbody>';
-				while ($donnees = $reponse->fetch())
+				while ( $donnees = $reponse->fetch() )
 				{
 					echo '<tr>';
-						echo '<td>' . htmlspecialchars($donnees['nomtache']) . '</td>';
+						if ($donnees['datemaxtache'] < $now)
+						{
+							echo '<td bgcolor=\'red\'><a href=\'?idtache=' . $donnees['idtache'] . '\'>' . htmlspecialchars($donnees['nomtache']) . '</a></td>';
+						}
+						else{
+							echo '<td><a href=\'?idtache=' . $donnees['idtache'] . '\'>' . htmlspecialchars($donnees['nomtache']) . '</a></td>';
+						}
+
 					echo '</tr>';
 				}
 			echo '</tbody>';
 		echo '</table>';
-		echo '</form>';
 	echo '</div>';
 	
 	$reponse->closeCursor();
