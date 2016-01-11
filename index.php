@@ -33,6 +33,11 @@
 
     <!--Corps de la page-->
     <body>
-        <?php include_once('./php/affichage.php'); ?>
+        <div id='navigation'>
+            <?php include_once('./php/navigation.php'); ?>
+        </div>
+        <div id='affichage'>
+            <?php include_once('./php/affichage.php'); ?>
+        </div>
     </body>
 </html>

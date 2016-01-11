@@ -4,16 +4,42 @@ a
 	color:black;
 }
 
+#affichage a:hover
+{
+	text-decoration:none;
+	color:blue;
+}
+
+#affichage div
+{
+	display:inline-block;
+	vertical-align:top;
+	margin :5px;
+	padding:5px;
+	border:1px solid black;
+}
+
 body
 {
 	white-space:nowrap;
-	font-size: 0.84em;
+	font-size: 0.82em;
 }
 
-div
+#navigation
+{
+	text-align: center;
+	border:1px solid black;
+	margin-bottom: 20px;
+}
+
+#navigation a:hover
+{
+	text-decoration:none;
+	color:blue;
+}
+
+#navigation li
 {
 	display: inline-block;
-	vertical-align: top;
-	margin : 10px;
-	border: 1px solid black;
+	margin-right:15px;
 }

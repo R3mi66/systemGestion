@@ -1,10 +1,9 @@
 <?php
     /*-----------------------------------*/
-    /*             index.php             */
+    /*            affichage.php          */
     /*-----------------------------------*/
     /*                                   */
-    /*    Page définissant l'affichage   */
-    /*          de l'application         */
+    /*    Gestion des pages affichées    */
     /*                                   */
     /*-----------------------------------*/
 ?>
@@ -12,39 +11,26 @@
 <?php
 	global $base;
 
-	$year = date("Y");
-	$now = date("Y-m-d H:i:s");
-
-	$ouvrage = array ('Agly','Vdr','Vinca','Reseau','Station');
-
-	if ( isset($_GET['idtache']) )
-	{
-		$base->query('UPDATE tache_' . $year . ' SET daterealisationtache = \'' . $now . '\' WHERE idtache=\'' . $_GET['idtache'] . '\'');
+  //Récupération du numero de la page dans l'adresse de la page
+  if (isset($_GET["page"])){
+		$page_aff=$_GET["page"];
+	}
+	elseif(isset($_POST["page"])){
+		$page_aff=$_POST["page"];
+	}
+	else{
+		$page_aff=0;
 	}
 	
-	//Liste des taches pour chacun des sites
-	for ($i=0; $i<5; $i++)
-	{
-		echo '<div id=\''. $ouvrage[$i] .'\'>';
-			$reponse = $base->query('SELECT idtache, nomtache, datemaxtache FROM tache_' . $year . ' WHERE nomtache LIKE \'%'. $ouvrage[$i] .'%\' AND datetache <= CURDATE() AND daterealisationtache IS NULL ORDER BY datemaxtache');
-			echo '<table>';
-				echo '<thead><tr><th>Tache '. $ouvrage[$i] .'</th></tr>';
-				echo '<tbody>';
-					while ( $donnees = $reponse->fetch() )
-					{
-						echo '<tr>';
-							if ($donnees['datemaxtache'] < $now)
-							{
-								echo '<td bgcolor=\'red\'><a href=\'?idtache=' . $donnees['idtache'] . '\'>' . htmlspecialchars($donnees['nomtache']) . '</a></td>';
-							}
-							else{
-								echo '<td><a href=\'?idtache=' . $donnees['idtache'] . '\'>' . htmlspecialchars($donnees['nomtache']) . '</a></td>';
-							}
-
-						echo '</tr>';
-					}
-				echo '</tbody>';
-			echo '</table>';
-		echo '</div>';
+	$mois=date("m");
+	$annee=date("Y");
+	
+	//Affichage d'un élément suivant le numero de page récupéré
+	switch($page_aff){
+		case 1:include("./php/tache_en_cours.php");break;
+		case 2:include("./php/liste_complete.php");break;
+		
+		default:include("./php/tache_en_cours.php");break;
+		
 	}
 ?>

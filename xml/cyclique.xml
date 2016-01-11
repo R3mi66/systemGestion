@@ -8,6 +8,7 @@
 	<intervention>Essai Groupe Electrogene Mobile<ouvrage>Vinca</ouvrage><cycle>Hebdomadaire</cycle></intervention>
 	<intervention>Essai Groupe Electrogene Archive<ouvrage>Vinca</ouvrage><cycle>Mensuel</cycle></intervention>
 	<intervention>Auscultation<ouvrage>Vinca</ouvrage><cycle>Hebdomadaire</cycle></intervention>
+	<intervention>Mesure DP Tet<ouvrage>Vinca</ouvrage><cycle>Semestriel</cycle></intervention>
 	<intervention>Releve Rec de Baix<ouvrage>Vinca</ouvrage><cycle>Hebdomadaire</cycle></intervention>
 	<intervention>Controle Mesures Plan d Eau<ouvrage>Vinca</ouvrage><cycle>Hebdomadaire</cycle></intervention>
 	<intervention>Releve Vinchons<ouvrage>Vinca</ouvrage><cycle>Semestriel</cycle></intervention>
@@ -22,7 +23,7 @@
 	<intervention>Test PTI<ouvrage>Vinca</ouvrage><cycle>Annuel</cycle></intervention>
 	<intervention>Test Telephone Satellite<ouvrage>Vinca</ouvrage><cycle>Annuel</cycle></intervention>
 	<intervention>Nettoyage Local Groupe Electrogene<ouvrage>Vinca</ouvrage><cycle>Mensuel</cycle></intervention>
-	<intervention>Visite Berge en Bateau<ouvrage>Vinca</ouvrage><cycle>Mensuel</cycle></intervention>
+	<intervention>Visite Berge en Bateau<ouvrage>Vinca</ouvrage><cycle>Trimestriel</cycle></intervention>
 	<intervention>Nettoyages Cuilleres Evacuateurs<ouvrage>Vinca</ouvrage><cycle>Annuel</cycle></intervention>
 	<intervention>Controle Visee Topo<ouvrage>Vinca</ouvrage><cycle>Annuel</cycle></intervention>
 	<intervention>Nettoyage Local Exploitation<ouvrage>Vinca</ouvrage><cycle>Mensuel</cycle></intervention>
@@ -45,18 +46,19 @@
 	<intervention>Recap. Fin de Mois + Registre<ouvrage>Vinca</ouvrage><cycle>Mensuel</cycle></intervention>
 	<intervention>Essai Radio Codis<ouvrage>Vinca</ouvrage><cycle>Hebdomadaire</cycle></intervention>
 	<intervention>Entretien Brise Charge<ouvrage>Vinca</ouvrage><cycle>Annuel</cycle></intervention>
+	<intervention>Prelevement Echantillon Eau pour Analyse<ouvrage>Vinca</ouvrage><cycle>Semestriel</cycle></intervention>
 	<!-- Barrage de Caramany -->
 	<intervention>Auscultation<ouvrage>Agly</ouvrage><cycle>Hebdomadaire</cycle></intervention>
 	<intervention>Visite d Ouvrage<ouvrage>Agly</ouvrage><cycle>Hebdomadaire</cycle></intervention>
 	<intervention>Essai Groupe Electrogene<ouvrage>Agly</ouvrage><cycle>Hebdomadaire</cycle></intervention>
 	<intervention>Test Alarme Incendie<ouvrage>Agly</ouvrage><cycle>Annuel</cycle></intervention>
 	<intervention>Test PTI<ouvrage>Agly</ouvrage><cycle>Annuel</cycle></intervention>
-	<intervention>Test Alarme Intrusion<ouvrage>Agly</ouvrage><cycle>Hebdomadaire</cycle></intervention>
+	<intervention>Test Alarme Intrusion<ouvrage>Agly</ouvrage><cycle>Annuel</cycle></intervention>
 	<intervention>Test Telephone Satellite<ouvrage>Agly</ouvrage><cycle>Decembre</cycle></intervention>
 	<intervention>Nettoyage Local Groupe Electrogene<ouvrage>Agly</ouvrage><cycle>Annuel</cycle></intervention>
 	<intervention>Taille Repousse Peupliers<ouvrage>Agly</ouvrage><cycle>Annuel</cycle></intervention>
 	<intervention>Desherbage Joint Evacuateur<ouvrage>Agly</ouvrage><cycle>Annuel</cycle></intervention>
-	<intervention>Visite Berge en Bateau<ouvrage>Agly</ouvrage><cycle>Annuel</cycle></intervention>
+	<intervention>Visite Berge en Bateau<ouvrage>Agly</ouvrage><cycle>Trimestriel</cycle></intervention>
 	<intervention>Nettoyage Cuilleres Evacuateur<ouvrage>Agly</ouvrage><cycle>Annuel</cycle></intervention>
 	<intervention>Controle Visee Topo<ouvrage>Agly</ouvrage><cycle>Semestriel</cycle></intervention>
 	<intervention>Nettoyage Local Exploitation<ouvrage>Agly</ouvrage><cycle>Mensuel</cycle></intervention>
@@ -96,6 +98,7 @@
 	<intervention>Mesure Fissure Beton Projete<ouvrage>Agly</ouvrage><cycle>Annuel</cycle></intervention>
 	<intervention>Nettoyage Caniveau Acces Aval<ouvrage>Agly</ouvrage><cycle>Annuel</cycle></intervention>
 	<intervention>Entretien Projecteurs Parement Aval<ouvrage>Agly</ouvrage><cycle>Annuel</cycle></intervention>
+	<intervention>Prelevement Echantillon Eau pour Analyse<ouvrage>Agly</ouvrage><cycle>Semestriel</cycle></intervention>
 	<!-- Barrage de VDR -->
 	<intervention>Auscultation<ouvrage>VDR</ouvrage><cycle>1semaine/2</cycle></intervention>
 	<intervention>Visite d Ouvrage<ouvrage>VDR</ouvrage><cycle>Hebdomadaire</cycle></intervention>
@@ -114,6 +117,7 @@
 	<intervention>Controle Electrique Periodique<ouvrage>VDR</ouvrage><cycle>Novembre</cycle></intervention>
 	<intervention>Controle Levage Periodique + EPI/EPC<ouvrage>VDR</ouvrage><cycle>Decembre</cycle></intervention>
 	<intervention>Controle Extincteur Periodique<ouvrage>VDR</ouvrage><cycle>Janvier</cycle></intervention>
+	<intervention>Visite Berge et Nettoyage Reglette<ouvrage>VDR</ouvrage><cycle>Annuel</cycle></intervention>
 	<!-- Stations -->
 	<intervention>Visite Station<ouvrage>Station</ouvrage><cycle>Saisonnier</cycle></intervention>
 	<intervention>Releves Energetiques<ouvrage>Station</ouvrage><cycle>Mensuel</cycle></intervention>
