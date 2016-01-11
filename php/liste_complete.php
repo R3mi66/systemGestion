@@ -20,7 +20,7 @@
 	for ($i=0; $i<5; $i++)
 	{
 		echo '<div id=\''. $ouvrage[$i] .'\'>';
-			$reponse = $base->query('SELECT idtache, nomtache, datemaxtache, daterealisationtache FROM tache_' . $year . ' WHERE nomtache LIKE \'%'. $ouvrage[$i] .'%\'');
+			$reponse = $base->query('SELECT idtache, nomtache, datemaxtache, daterealisationtache FROM tache_' . $year . ' WHERE nomtache LIKE \'%'. $ouvrage[$i] .'%\' ORDER BY nomtache');
 			echo '<table>';
 				echo '<thead><tr><th>Tache '. $ouvrage[$i] .'</th></tr>';
 				echo '<tbody>';
