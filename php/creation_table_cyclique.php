@@ -62,7 +62,8 @@
         //Remplissage de la table avec les données du fichier cyclique.xml
         foreach ($xml->intervention as $intervention)
         {
-            switch ($intervention->cycle) {
+            switch ($intervention->cycle)
+            {
                 case 'Trimestriel':
                     $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Mars - ' . $intervention->ouvrage . '\', \'' . $year . '-03-01 00:00:00\', \'' . $year . '-03-31 23:59:59\', NULL, NULL)');
                     $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Juin - ' . $intervention->ouvrage . '\', \'' . $year . '-06-01 00:00:00\', \'' . $year . '-06-30 23:59:59\', NULL, NULL)');
@@ -82,7 +83,8 @@
                     break;
 
                 case 'Hebdomadaire':
-                    for ($i = 1; $i < $nbresemaine+1; $i++){
+                    for ($i = 1; $i < $nbresemaine+1; $i++)
+                    {
                         $retour = get_monday_friday_week($i, $year);
                         
                         $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Semaine ' . $i . ' - ' . $intervention->ouvrage . '\', \'' . $retour[0] . ' 00:00:00\', \'' . $retour[1]  . ' 23:59:59\', NULL, NULL)');
@@ -105,7 +107,8 @@
                     break;
 
                 case 'Saisonnier':
-                    for ($i = $debutcampagne; $i < $fincampagne+1; $i++){
+                    for ($i = $debutcampagne; $i < $fincampagne+1; $i++)
+                    {
                         //Thuir
                         $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'Visite Mascareil - Semaine ' . $i . ' - ' . $intervention->ouvrage . '\', \'' . $retour[0] . ' 00:00:00\', \'' . $retour[1]  . ' 23:59:59\', NULL, NULL)');
                         $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'Visite Camelas - Semaine ' . $i . ' - ' . $intervention->ouvrage . '\', \'' . $retour[0] . ' 00:00:00\', \'' . $retour[1]  . ' 23:59:59\', NULL, NULL)');
@@ -125,6 +128,20 @@
 
                 case 'Annuel':
                     $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Année ' . $year . ' - ' . $intervention->ouvrage . '\', \'' . $year . '-01-01 00:00:00\', \'' . $year . '-12-10 23:59:59\', NULL, NULL)');
+                    break;
+
+                case 'Annuelp':
+                    if ( $year%2 == 0 )
+                    {
+                        $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Année ' . $year . ' - ' . $intervention->ouvrage . '\', \'' . $year . '-01-01 00:00:00\', \'' . $year . '-12-10 23:59:59\', NULL, NULL)');
+                    }
+                    break;
+
+                case 'Annueli':
+                    if ( $year%2 != 0 )
+                    {
+                        $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Année ' . $year . ' - ' . $intervention->ouvrage . '\', \'' . $year . '-01-01 00:00:00\', \'' . $year . '-12-10 23:59:59\', NULL, NULL)');
+                    }
                     break;
 
                 case 'Janvier':
@@ -176,8 +193,10 @@
                     break;
 
                 case '1semaine/2':
-                    for ($i = 1; $i < $nbresemaine+1; $i++){
-                        if ( $i%2 == 0 ){
+                    for ($i = 1; $i < $nbresemaine+1; $i++)
+                    {
+                        if ( $i%2 == 0 )
+                        {
                             $retour = get_monday_friday_week($i, $year);
                             
                             $requete = $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Semaine ' . $i . ' - ' . $intervention->ouvrage . '\', \'' . $retour[0] . ' 00:00:00\', \'' . $retour[1]  . ' 23:59:59\', NULL, NULL)');
