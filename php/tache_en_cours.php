@@ -14,7 +14,7 @@
 	$year = date("Y");
 	$now = date("Y-m-d H:i:s");
 
-	$ouvrage = array ('Agly','Vdr','Vinca','Reseau','Station');
+	$ouvrage = array ('Agly','VDR','Vinca','Reseau','Station');
 
 	if ( isset($_GET['idtache']) )
 	{
@@ -25,7 +25,7 @@
 	for ($i=0; $i<5; $i++)
 	{
 		echo '<div id=\''. $ouvrage[$i] .'\'>';
-			$reponse = $base->query('SELECT idtache, nomtache, datemaxtache FROM tache_' . $year . ' WHERE nomtache LIKE \'%'. $ouvrage[$i] .'%\' AND datetache <= CURDATE() AND daterealisationtache IS NULL ORDER BY datemaxtache');
+			$reponse = $base->query('SELECT idtache, nomtache, datemaxtache FROM tache_' . $year . ' WHERE nomtache LIKE \'%'. $ouvrage[$i] .'\' AND datetache <= CURDATE() AND daterealisationtache IS NULL ORDER BY datemaxtache');
 			echo '<table>';
 				echo '<thead><tr><th>Tache '. $ouvrage[$i] .'</th></tr>';
 				echo '<tbody>';

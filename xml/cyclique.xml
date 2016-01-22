@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="windows-1250"?>
 <CYCLIQUE>
 	<!-- Barrage de Vinça -->
-	<intervention>Essai Sirène<ouvrage>Vinca</ouvrage><cycle>Trimestriel</cycle></intervention>
-	<intervention>Essai Non Sonore Sirène<ouvrage>Vinca</ouvrage><cycle>2mois/3</cycle></intervention>
+	<intervention>Essai Sirene<ouvrage>Vinca</ouvrage><cycle>Trimestriel</cycle></intervention>
+	<intervention>Essai Non Sonore Sire	ne<ouvrage>Vinca</ouvrage><cycle>2mois/3</cycle></intervention>
 	<intervention>Visite d Ouvrage<ouvrage>Vinca</ouvrage><cycle>Hebdomadaire</cycle></intervention>
 	<intervention>Essai Groupe Electrogene Fixe<ouvrage>Vinca</ouvrage><cycle>Hebdomadaire</cycle></intervention>
 	<intervention>Essai Groupe Electrogene Mobile<ouvrage>Vinca</ouvrage><cycle>Hebdomadaire</cycle></intervention>
@@ -47,7 +47,9 @@
 	<intervention>Recap. Fin de Mois + Registre<ouvrage>Vinca</ouvrage><cycle>Mensuel</cycle></intervention>
 	<intervention>Essai Radio Codis<ouvrage>Vinca</ouvrage><cycle>Hebdomadaire</cycle></intervention>
 	<intervention>Entretien Brise Charge<ouvrage>Vinca</ouvrage><cycle>Annuel</cycle></intervention>
+	<intervention>Entretien Climatisation<ouvrage>Vinca</ouvrage><cycle>Janvier</cycle></intervention>
 	<intervention>Prelevement Echantillon Eau pour Analyse<ouvrage>Vinca</ouvrage><cycle>Annueli</cycle></intervention>
+	<intervention>Manoeuvre sous Groupe Electrogene<ouvrage>Vinca</ouvrage><cycle>Annuel</cycle></intervention>
 	<!-- Barrage de Caramany -->
 	<intervention>Auscultation<ouvrage>Agly</ouvrage><cycle>Hebdomadaire</cycle></intervention>
 	<intervention>Visite d Ouvrage<ouvrage>Agly</ouvrage><cycle>Hebdomadaire</cycle></intervention>
@@ -99,7 +101,8 @@
 	<intervention>Mesure Fissure Beton Projete<ouvrage>Agly</ouvrage><cycle>Octobre</cycle></intervention>
 	<intervention>Nettoyage Caniveau Acces Aval<ouvrage>Agly</ouvrage><cycle>Annuel</cycle></intervention>
 	<intervention>Entretien Projecteurs Parement Aval<ouvrage>Agly</ouvrage><cycle>Annuel</cycle></intervention>
-	<intervention>Prelevement Echantillon Eau pour Analyse<ouvrage>Agly</ouvrage><cycle>Biannueli</cycle></intervention>
+	<intervention>Prelevement Echantillon Eau pour Analyse<ouvrage>Agly</ouvrage><cycle>Annueli</cycle></intervention>
+	<intervention>Manoeuvre sous Groupe Electrogene<ouvrage>Agly</ouvrage><cycle>Annuel</cycle></intervention>
 	<!-- Barrage de VDR -->
 	<intervention>Auscultation<ouvrage>VDR</ouvrage><cycle>1semaine/2</cycle></intervention>
 	<intervention>Visite d Ouvrage<ouvrage>VDR</ouvrage><cycle>Hebdomadaire</cycle></intervention>
@@ -120,7 +123,8 @@
 	<intervention>Controle Extincteur Periodique<ouvrage>VDR</ouvrage><cycle>Janvier</cycle></intervention>
 	<intervention>Visite Berge et Nettoyage Reglette<ouvrage>VDR</ouvrage><cycle>Annuel</cycle></intervention>
 	<intervention>Test Telephone Satellite<ouvrage>VDR</ouvrage><cycle>Mars</cycle></intervention>
-	<intervention>Test Telephone Satellite<ouvrage>Vinca</ouvrage><cycle>Septembre</cycle></intervention>
+	<intervention>Test Telephone Satellite<ouvrage>VDR</ouvrage><cycle>Septembre</cycle></intervention>
+	<intervention>Entretien Climatisation<ouvrage>VDR</ouvrage><cycle>Janvier</cycle></intervention>
 	<!-- Stations -->
 	<intervention>Visite Station<ouvrage>Station</ouvrage><cycle>Saisonnier</cycle></intervention>
 	<intervention>Visite Station VDR<ouvrage>Station</ouvrage><cycle>Hebdomadaire</cycle></intervention>

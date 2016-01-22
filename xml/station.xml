@@ -4,17 +4,15 @@
 	<ouvrage>Camelas<visitehebdo>2</visitehebdo></ouvrage>
 	<ouvrage>Mascareil<visitehebdo>2</visitehebdo></ouvrage>
 
-	<!-- ASA Corbère -->
-	<ouvrage>Camelas<visitehebdo>0</visitehebdo></ouvrage>
-	<ouvrage>Camelas<visitehebdo>0</visitehebdo></ouvrage>
-	<ouvrage>Camelas<visitehebdo>0</visitehebdo></ouvrage>
-
 	<!-- ASA Espira de l'Agly -->
-	<ouvrage>Camelas<visitehebdo>1</visitehebdo></ouvrage>
+	<ouvrage>Espira<visitehebdo>1</visitehebdo></ouvrage>
 
 	<!-- ASA Rivesaltes -->
-	<ouvrage>Camelas<visitehebdo>1</visitehebdo></ouvrage>
+	<ouvrage>Rivesaltes<visitehebdo>1</visitehebdo></ouvrage>
 
 	<!-- ASA Latour de France -->
-	<ouvrage>Camelas<visitehebdo>1</visitehebdo></ouvrage>
+	<ouvrage>Latour<visitehebdo>1</visitehebdo></ouvrage>
+
+	<!-- ASA VDR -->
+	<ouvrage>VDR<visitehebdo>0</visitehebdo></ouvrage>
 </STATION>
