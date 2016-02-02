@@ -31,10 +31,19 @@
 							{
 								echo '<td bgcolor=\'red\'><a href=\'?idtache=' . $donnees['idtache'] . '\'>' . htmlspecialchars($donnees['nomtache']) . '</a></td>';
 							}
-							elseif ($donnees['daterealisationtache'] != NULL) {
-								echo '<td bgcolor=\'green\'><a href=\'?idtache=' . $donnees['idtache'] . '\'>' . htmlspecialchars($donnees['nomtache']) . '</a></td>';
+							elseif ($donnees['daterealisationtache'] != NULL)
+							{
+								if ($donnees['datemaxtache'] < $donnees['daterealisationtache'])
+								{
+									echo '<td bgcolor=\'orange\'><a href=\'?idtache=' . $donnees['idtache'] . '\'>' . htmlspecialchars($donnees['nomtache']) . '</a></td>';
+								}
+								else
+								{
+									echo '<td bgcolor=\'green\'><a href=\'?idtache=' . $donnees['idtache'] . '\'>' . htmlspecialchars($donnees['nomtache']) . '</a></td>';
+								}
 							}
-							else{
+							else
+							{
 								echo '<td><a href=\'?idtache=' . $donnees['idtache'] . '\'>' . htmlspecialchars($donnees['nomtache']) . '</a></td>';
 							}
 

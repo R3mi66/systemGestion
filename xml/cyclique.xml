@@ -40,7 +40,7 @@
 	<intervention>Manoeuvre Mensuelle<ouvrage>Vinca</ouvrage><cycle>Mensuel</cycle></intervention>
 	<intervention>Depoussierage + Controle Serrage Armoires Electrique<ouvrage>Vinca</ouvrage><cycle>Annuel</cycle></intervention>
 	<intervention>Entretien Annuel Groupe Electrogene<ouvrage>Vinca</ouvrage><cycle>Annuel</cycle></intervention>
-	<intervention>Entretien Chargeur Batterie et Onduleur<ouvrage>Vinca</ouvrage><cycle>Mensuel</cycle></intervention>
+	<intervention>Entretien Chargeur Batterie et Onduleur<ouvrage>Vinca</ouvrage><cycle>Annuel</cycle></intervention>
 	<intervention>Graissage Jet-Creux<ouvrage>Vinca</ouvrage><cycle>Mensuel</cycle></intervention>
 	<intervention>Controle Qualite Huile +Filtration<ouvrage>Vinca</ouvrage><cycle>Mensuel</cycle></intervention>
 	<intervention>Entretien Poste Sirene<ouvrage>Vinca</ouvrage><cycle>Mensuel</cycle></intervention>
@@ -125,6 +125,7 @@
 	<intervention>Test Telephone Satellite<ouvrage>VDR</ouvrage><cycle>Mars</cycle></intervention>
 	<intervention>Test Telephone Satellite<ouvrage>VDR</ouvrage><cycle>Septembre</cycle></intervention>
 	<intervention>Entretien Climatisation<ouvrage>VDR</ouvrage><cycle>Janvier</cycle></intervention>
+	<intervention>Recap. Fin de Mois + Registre<ouvrage>VDR</ouvrage><cycle>Mensuel</cycle></intervention>
 	<!-- Stations -->
 	<intervention>Visite Station<ouvrage>Station</ouvrage><cycle>Saisonnier</cycle></intervention>
 	<intervention>Visite Station VDR<ouvrage>Station</ouvrage><cycle>Hebdomadaire</cycle></intervention>
