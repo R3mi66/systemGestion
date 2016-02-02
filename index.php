@@ -22,7 +22,7 @@
 
 <!DOCTYPE html>
 <html>
-    <!--Entete de la page-->
+    <!-- Entete de la page -->
     <head>
         <meta charset="utf-8" />
         <title>Système de gestion des interventions systématiques</title>
@@ -31,11 +31,19 @@
         <link rel="stylesheet" href="./css/style.css" />
     </head>
 
-    <!--Corps de la page-->
+    <!-- Corps de la page-->
     <body>
+        <!-- Barre de Navigation -->
         <div id='navigation'>
             <?php include_once('./php/navigation.php'); ?>
         </div>
+
+        <!-- Formulaire d'ajout d'une tache -->
+        <div id='formulaire'>
+            <?php include_once('./php/formulaire.php'); ?>
+        </div>
+
+        <!-- Affichage principal -->
         <div id='affichage'>
             <?php include_once('./php/affichage.php'); ?>
         </div>

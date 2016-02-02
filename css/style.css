@@ -25,10 +25,32 @@ body
 	font-size: 0.82em;
 }
 
-#navigation
+#formulaire
 {
+	width:50%;
 	text-align: center;
 	border:1px solid black;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+#formulaire p
+{
+	display: inline-block;
+	margin-right:15px;
+}
+
+#formulaire label
+{
+	font-weight: bold;
+}
+
+#navigation
+{
+	width:50%;
+	text-align: center;
+	border:1px solid black;
+	margin: auto;
 	margin-bottom: 20px;
 }
 
