@@ -113,7 +113,7 @@
 		public function updateMessage($idMessage, $textMessage, $dateMessage, $dateRealisationMessage){
 			global $base;
 
-			if (preg_match('#[^a-zA-Z]#', $idMessage)
+			if (preg_match('#[^a-zA-Z]#', $idMessage))
 			{
 				//Requête de mise à jour des données
 				$base->query('UPDATE message SET textmessage = \'' . htmlspecialchars($textMessage) . '\', datemessage = \'' . $dateMessage . '\', daterealisationmessage = \'' . $dateRealisationMessage . '\' WHERE idmessage = \'' . $idMessage . '\'');

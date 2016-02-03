@@ -4,6 +4,18 @@ a
 	color:black;
 }
 
+#affichage td
+{
+	border-radius: 5px;
+	padding :5px;
+	box-shadow: 2px 2px 5px gray;
+}
+
+#affichage td:hover
+{
+	box-shadow: 0.5px 0.5px 0.5px gray;
+}
+
 #affichage a:hover
 {
 	text-decoration:none;
@@ -49,15 +61,8 @@ body
 {
 	width:50%;
 	text-align: center;
-	border:1px solid black;
 	margin: auto;
 	margin-bottom: 20px;
-}
-
-#navigation a:hover
-{
-	text-decoration:none;
-	color:blue;
 }
 
 #navigation li
@@ -66,4 +71,14 @@ body
 	margin-right:15px;
 	font-size: 1.2em;
 	font-weight: bold;
+	border-radius: 5px;
+	padding :5px;
+	background-color: #e6e6fa;
+	box-shadow: 2px 2px 5px gray;
 }
+
+#navigation li:hover
+{
+	box-shadow: 0.5px 0.5px 0.5px gray;
+}
+

@@ -13,7 +13,6 @@
 	class Ouvrage
 	{
 		private $idouvrage;
-		private $idsousgroupe;
 		private $nomouvrage;
 
 		/*-------------------*/
@@ -23,7 +22,7 @@
 		public function __construct()
 		{
 			$this->idouvrage = '';
-			$this->idsousgroupe = $this->nomouvrage = '';
+			$this->nomouvrage = '';
 		}
 
 		/*-------------------*/
@@ -33,11 +32,6 @@
 		public function setIdOuvrage($nouvelIdOuvrage)
 		{
 			$this->idouvrage = $nouvelIdOuvrage;
-		}
-
-		public function setIdSousGroupe($nouvelIdSousGroupe)
-		{
-			$this->idsousgroupe = $nouvelIdSousGroupe;
 		}
 
 		public function setNomOuvrage($nouvelNomOuvrage)
@@ -54,11 +48,6 @@
 			return $this->idouvrage;
 		}
 
-		public function getIdSousGroupe()
-		{
-			return $this->idsousgroupe;
-		}
-
 		public function getNomOuvrage()
 		{
 			return $this->nomouvrage;
@@ -69,13 +58,13 @@
 		/*--------------------------*/
 
 		//Ajout d'un groupe
-		public function addOuvrage($idSousGroupe, $nomOuvrage){
+		public function addOuvrage($nomOuvrage){
 			global $base;
 
 			if (($nomOuvrage != '') and (preg_match('#[^a-zA-Z]#', $idSousGroupe)))
 			{
 				//Requête de récupération des données
-				$base->query('INSERT INTO ouvrage (idsousgroupe, nomouvrage) VALUES (\'' . $idSousGroupe . '\', \'' . htmlspecialchars($this->nomOuvrage) . '\')');
+				$base->query('INSERT INTO ouvrage (nomouvrage) VALUES (\'' . htmlspecialchars($this->nomOuvrage) . '\')');
 			}
 			else
 			{
@@ -99,13 +88,13 @@
 		}
 
 		//Mise à jour d'un ouvrage
-		public function updateOuvrage($idOuvrage, $idSousGroupe, $nomOuvrage){
+		public function updateOuvrage($idOuvrage, $nomOuvrage){
 			global $base;
 
-			if ((preg_match('#[^a-zA-Z]#', $idOuvrage)) and (preg_match('#[^a-zA-Z]#', $idSousGroupe)))
+			if (preg_match('#[^a-zA-Z]#', $idOuvrage))
 			{
 				//Requête de mise à jour des données
-				$base->query('UPDATE ouvrage SET nomouvrage = \'' . htmlspecialchars($nomOuvrage) . '\', idsousgroupe = \'' . $idSousGroupe . '\' WHERE idouvrage = \'' . $idOuvrage . '\'');
+				$base->query('UPDATE ouvrage SET nomouvrage = \'' . htmlspecialchars($nomOuvrage) . '\' WHERE idouvrage = \'' . $idOuvrage . '\'');
 			}
 			else
 			{
@@ -125,7 +114,7 @@
 			if ($donnees['nomouvrage'] != '')
 			{
 				//Affectation des données récupérées
-				$this->nomgroupe = $donnees['nomouvrage'];
+				$this->nomouvrage = $donnees['nomouvrage'];
 			}
 			else
 			{

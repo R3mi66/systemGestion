@@ -38,10 +38,18 @@
             <?php include_once('./php/navigation.php'); ?>
         </div>
 
-        <!-- Formulaire d'ajout d'une tache -->
-        <div id='formulaire'>
-            <?php include_once('./php/formulaire.php'); ?>
-        </div>
+        <!-- Determination de l'affichage ou non de la barre formulaire -->
+        <?php
+            if (!isset($_GET["page"]) OR ($_GET["page"]==1))
+            {
+        ?>
+            <!-- Formulaire d'ajout d'une tache -->
+            <div id='formulaire'>
+                <?php include_once('./php/formulaire.php'); ?>
+            </div>
+        <?php
+            }
+        ?>
 
         <!-- Affichage principal -->
         <div id='affichage'>

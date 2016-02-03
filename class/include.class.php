@@ -1,5 +1,4 @@
 <?php
-	include('./class/groupe.class.php');
-	include('./class/sousgroupe.class.php');
+	include('./class/message.class.php');
 	include('./class/ouvrage.class.php');
 ?>
