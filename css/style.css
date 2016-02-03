@@ -8,18 +8,12 @@ a
 {
 	border-radius: 5px;
 	padding :5px;
-	box-shadow: 2px 2px 5px gray;
+	box-shadow: 3px 3px 3px gray;
 }
 
 #affichage td:hover
 {
 	box-shadow: 0.5px 0.5px 0.5px gray;
-}
-
-#affichage a:hover
-{
-	text-decoration:none;
-	color:blue;
 }
 
 #affichage div
@@ -74,7 +68,7 @@ body
 	border-radius: 5px;
 	padding :5px;
 	background-color: #e6e6fa;
-	box-shadow: 2px 2px 5px gray;
+	box-shadow: 2px 2px 2px gray;
 }
 
 #navigation li:hover

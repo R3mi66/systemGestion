@@ -19,7 +19,7 @@
 ?>
 
     <!-- Formulaire d'ajout -->
-    <form method="post" action="traitement_formulaire.php">
+    <form method="post" action="./php/traitement_formulaire.php">
         <p>
             <label for="intervention">Intervention</label> : <input type="text" name="intervention" required />
         </p>
