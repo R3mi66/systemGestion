@@ -34,7 +34,7 @@
 						echo '<tr>';
 							if ($donnees['datemaxtache'] < $now)
 							{
-								echo '<td bgcolor=\'red\'><a href=\'?idtache=' . $donnees['idtache'] . '\'>' . htmlspecialchars($donnees['nomtache']) . '</a></td>';
+								echo '<td bgcolor=\'#ff6347\'><a href=\'?idtache=' . $donnees['idtache'] . '\'>' . htmlspecialchars($donnees['nomtache']) . '</a></td>';
 							}
 							else{
 								echo '<td><a href=\'?idtache=' . $donnees['idtache'] . '\'>' . htmlspecialchars($donnees['nomtache']) . '</a></td>';

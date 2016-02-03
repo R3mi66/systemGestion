@@ -29,7 +29,7 @@
 						echo '<tr>';
 							if (($donnees['datemaxtache'] < $now) AND ($donnees['daterealisationtache'] == NULL))
 							{
-								echo '<td bgcolor=\'red\'>' . htmlspecialchars($donnees['nomtache']) . '</td>';
+								echo '<td bgcolor=\'#ff6347\'>' . htmlspecialchars($donnees['nomtache']) . '</td>';
 							}
 							elseif ($donnees['daterealisationtache'] != NULL)
 							{
@@ -39,7 +39,7 @@
 								}
 								else
 								{
-									echo '<td bgcolor=\'green\'>' . htmlspecialchars($donnees['nomtache']) . '</td>';
+									echo '<td bgcolor=\'#98fb98\'>' . htmlspecialchars($donnees['nomtache']) . '</td>';
 								}
 							}
 							else
