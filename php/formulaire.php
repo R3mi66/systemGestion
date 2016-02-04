@@ -29,7 +29,10 @@
                 <?php
                     while ( $donnees_ouvrage = $list_ouvrage->fetch() )
                     {
-                        echo '<option value="' . $donnees_ouvrage['idouvrage'] .'">' . $donnees_ouvrage['nomouvrage'] . '</option>';
+                        if ($donnees_ouvrage['nomouvrage'] != "Station")
+                        {
+                            echo '<option value="' . $donnees_ouvrage['nomouvrage'] .'">' . $donnees_ouvrage['nomouvrage'] . '</option>';
+                        }
                     }
                 ?>
             </select>
@@ -40,7 +43,7 @@
                 <?php
                     while ( $donnees_cycle = $list_cycle->fetch() )
                     {
-                        echo '<option value="' . $donnees_cycle['idcycle'] .'">' . $donnees_cycle['nomcycle'] . '</option>';
+                        echo '<option value="' . $donnees_cycle['nomcycle'] .'">' . $donnees_cycle['nomcycle'] . '</option>';
                     }
                 ?>
             </select>
