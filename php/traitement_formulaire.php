@@ -29,12 +29,6 @@
     $ouvrage = $_POST['ouvrage'];
     $cycle = $_POST['cycle'];
 
-    //Chargement du fichier de la liste des stations
-    if (file_exists("../xml/station.xml"))
-    {
-            $xml2=simplexml_load_file("../xml/station.xml");
-    }
-
     switch ($cycle)
     {
         case 'Trimestriel':
@@ -55,32 +49,11 @@
             break;
 
         case 'Mensuel':
-            if ($ouvrage == "Station")
-            {
-                foreach ($xml2->ouvrage as $ouvrage_station)
-                {
-                    mensuel_station($intervention, $ouvrage_station, $ouvrage, $year);
-                }
-            }
-            else
-            {
-                mensuel($intervention, $ouvrage, $year);
-             }
-             break;
+            mensuel($intervention, $ouvrage, $year);
+            break;
 
         case 'Saisonnier':
-            for ($i = $debutcampagne; $i < $fincampagne+1; $i++)
-            {
-                $retour = get_monday_friday_week($i, $year);
-
-                foreach ($xml2->ouvrage as $ouvrage_station)
-                {
-                    for($j = 0; $j < $ouvrage->visitehebdo; $j++)
-                    {
-                        saisonnier($intervention, $ouvrage_station, $ouvrage, $year, $i, $retour[0], $retour[1]);
-                    }
-                }
-            }
+            saisonnier($intervention, $ouvrage_station, $ouvrage, $year, $i, $retour[0], $retour[1]);
             break;
 
         case 'Semestriel':

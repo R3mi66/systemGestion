@@ -50,6 +50,7 @@
 	<intervention>Entretien Climatisation<ouvrage>Vinca</ouvrage><cycle>Janvier</cycle></intervention>
 	<intervention>Prelevement Echantillon Eau pour Analyse<ouvrage>Vinca</ouvrage><cycle>Annueli</cycle></intervention>
 	<intervention>Manoeuvre sous Groupe Electrogene<ouvrage>Vinca</ouvrage><cycle>Annuel</cycle></intervention>
+	
 	<!-- Barrage de Caramany -->
 	<intervention>Auscultation<ouvrage>Agly</ouvrage><cycle>Hebdomadaire</cycle></intervention>
 	<intervention>Visite d Ouvrage<ouvrage>Agly</ouvrage><cycle>Hebdomadaire</cycle></intervention>
@@ -103,6 +104,7 @@
 	<intervention>Entretien Projecteurs Parement Aval<ouvrage>Agly</ouvrage><cycle>Annuel</cycle></intervention>
 	<intervention>Prelevement Echantillon Eau pour Analyse<ouvrage>Agly</ouvrage><cycle>Annueli</cycle></intervention>
 	<intervention>Manoeuvre sous Groupe Electrogene<ouvrage>Agly</ouvrage><cycle>Annuel</cycle></intervention>
+
 	<!-- Barrage de VDR -->
 	<intervention>Auscultation<ouvrage>VDR</ouvrage><cycle>1semaine/2</cycle></intervention>
 	<intervention>Visite d Ouvrage<ouvrage>VDR</ouvrage><cycle>Hebdomadaire</cycle></intervention>
@@ -126,13 +128,46 @@
 	<intervention>Test Telephone Satellite<ouvrage>VDR</ouvrage><cycle>Septembre</cycle></intervention>
 	<intervention>Entretien Climatisation<ouvrage>VDR</ouvrage><cycle>Janvier</cycle></intervention>
 	<intervention>Recap. Fin de Mois + Registre<ouvrage>VDR</ouvrage><cycle>Mensuel</cycle></intervention>
+
 	<!-- Stations -->
-	<intervention>Visite Station<ouvrage>Station</ouvrage><cycle>Saisonnier</cycle></intervention>
+	<intervention>Visite Station Camelas<ouvrage>Station</ouvrage><cycle>Saisonnier</cycle></intervention>
+	<intervention>Visite Station Mascareil<ouvrage>Station</ouvrage><cycle>Saisonnier</cycle></intervention>
+	<intervention>Visite Station Espira<ouvrage>Station</ouvrage><cycle>Saisonnier</cycle></intervention>
+	<intervention>Visite Station Rivesaltes<ouvrage>Station</ouvrage><cycle>Saisonnier</cycle></intervention>
+	<intervention>Visite Station Latour de France<ouvrage>Station</ouvrage><cycle>Saisonnier</cycle></intervention>
 	<intervention>Visite Station VDR<ouvrage>Station</ouvrage><cycle>Hebdomadaire</cycle></intervention>
-	<intervention>Releves Energetiques<ouvrage>Station</ouvrage><cycle>Mensuel</cycle></intervention>
-	<intervention>Controle Electrique Periodique<ouvrage>Station</ouvrage><cycle>Mars</cycle></intervention>
-	<intervention>Controle Levage Periodique<ouvrage>Station</ouvrage><cycle>Decembre</cycle></intervention>
-	<intervention>Controle Extincteur Periodique<ouvrage>Station</ouvrage><cycle>Juillet</cycle></intervention>
+	<intervention>Releves Energetiques Camelas<ouvrage>Station</ouvrage><cycle>Mensuel</cycle></intervention>
+	<intervention>Releves Energetiques Mascareil<ouvrage>Station</ouvrage><cycle>Mensuel</cycle></intervention>
+	<intervention>Releves Energetiques Espira<ouvrage>Station</ouvrage><cycle>Mensuel</cycle></intervention>
+	<intervention>Releves Energetiques Rivesaltes<ouvrage>Station</ouvrage><cycle>Mensuel</cycle></intervention>
+	<intervention>Releves Energetiques Latour de France<ouvrage>Station</ouvrage><cycle>Mensuel</cycle></intervention>
+	<intervention>Releves Energetiques VDR<ouvrage>Station</ouvrage><cycle>Mensuel</cycle></intervention>
+	<intervention>Controle Electrique Periodique Camelas<ouvrage>Station</ouvrage><cycle>Mars</cycle></intervention>
+	<intervention>Controle Electrique Periodique Mascareil<ouvrage>Station</ouvrage><cycle>Mars</cycle></intervention>
+	<intervention>Controle Electrique Periodique Espira<ouvrage>Station</ouvrage><cycle>Mars</cycle></intervention>
+	<intervention>Controle Electrique Periodique Rivesaltes<ouvrage>Station</ouvrage><cycle>Mars</cycle></intervention>
+	<intervention>Controle Electrique Periodique Latour de France<ouvrage>Station</ouvrage><cycle>Mars</cycle></intervention>
+	<intervention>Controle Electrique Periodique VDR<ouvrage>Station</ouvrage><cycle>Mars</cycle></intervention>
+	<intervention>Controle Electrique Periodique Corbere<ouvrage>Station</ouvrage><cycle>Mars</cycle></intervention>
+	<intervention>Controle Electrique Periodique Saint Michel<ouvrage>Station</ouvrage><cycle>Mars</cycle></intervention>
+	<intervention>Controle Electrique Periodique Bouleternere<ouvrage>Station</ouvrage><cycle>Mars</cycle></intervention>
+	<intervention>Controle Levage Periodique Camelas<ouvrage>Station</ouvrage><cycle>Decembre</cycle></intervention>
+	<intervention>Controle Levage Periodique Mascareil<ouvrage>Station</ouvrage><cycle>Decembre</cycle></intervention>
+	<intervention>Controle Levage Periodique VDR<ouvrage>Station</ouvrage><cycle>Decembre</cycle></intervention>
+	<intervention>Controle Extincteur Periodique VDR<ouvrage>Station</ouvrage><cycle>Janvier</cycle></intervention>
+	<intervention>Controle Extincteur Periodique Camelas<ouvrage>Station</ouvrage><cycle>Juillet</cycle></intervention>
+	<intervention>Controle Extincteur Periodique Mascareil<ouvrage>Station</ouvrage><cycle>Juillet</cycle></intervention>
+	<intervention>Controle Extincteur Periodique Espira<ouvrage>Station</ouvrage><cycle>Juillet</cycle></intervention>
+	<intervention>Controle Extincteur Periodique Rivesaltes<ouvrage>Station</ouvrage><cycle>Juillet</cycle></intervention>
+	<intervention>Controle Extincteur Periodique Corbere<ouvrage>Station</ouvrage><cycle>Mars</cycle></intervention>
+	<intervention>Controle Extincteur Periodique Bouleternere<ouvrage>Station</ouvrage><cycle>Mars</cycle></intervention>
+	<intervention>Controle Extincteur Periodique Saint Michel<ouvrage>Station</ouvrage><cycle>Mars</cycle></intervention>
+	<intervention>Entretien Transformateur Camelas<ouvrage>Station</ouvrage><cycle>Annueli</cycle></intervention>
+	<intervention>Entretien Transformateur Mascareil<ouvrage>Station</ouvrage><cycle>Annueli</cycle></intervention>
+	<intervention>Entretien Transformateur Corbere<ouvrage>Station</ouvrage><cycle>Annueli</cycle></intervention>
+	<intervention>Entretien Transformateur Bouleternere<ouvrage>Station</ouvrage><cycle>Annueli</cycle></intervention>
+	<intervention>Entretien Transformateur Saint Michel<ouvrage>Station</ouvrage><cycle>Annueli</cycle></intervention>
+
 	<!-- Reseau -->
 	<intervention>Releve EUD/EBG<ouvrage>Reseau</ouvrage><cycle>Mensuel</cycle></intervention>
 	<intervention>Releve EAG<ouvrage>Reseau</ouvrage><cycle>Annuel</cycle></intervention>

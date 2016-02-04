@@ -35,12 +35,6 @@
                 $xml=simplexml_load_file("./xml/cyclique.xml");
         }
 
-        //Chargement du fichier de la liste des stations
-        if (file_exists("./xml/station.xml"))
-        {
-                $xml2=simplexml_load_file("./xml/station.xml");
-        }
-
         //Creation de la table annuelle
         $creation = $base->query('CREATE TABLE tache_' . $year . '(idtache INT UNSIGNED AUTO_INCREMENT, nomtache VARCHAR(255) NOT NULL, datetache DATETIME NOT NULL, datemaxtache DATETIME NOT NULL, daterealisationtache DATETIME, commentaire VARCHAR(258), PRIMARY KEY (idtache)) ENGINE=INNODB');
 
@@ -67,32 +61,11 @@
                     break;
 
                 case 'Mensuel':
-                    if ($intervention->ouvrage == "Station")
-                    {
-                        foreach ($xml2->ouvrage as $ouvrage)
-                        {
-                            mensuel_station($intervention, $ouvrage, $intervention->ouvrage, $year);
-                        }
-                    }
-                    else
-                    {
-                        mensuel($intervention, $intervention->ouvrage, $year);
-                     }
-                     break;
+                    mensuel($intervention, $intervention->ouvrage, $year);
+                    break;
 
                 case 'Saisonnier':
-                    for ($i = $debutcampagne; $i < $fincampagne+1; $i++)
-                    {
-                        $retour = get_monday_friday_week($i, $year);
-
-                        foreach ($xml2->ouvrage as $ouvrage)
-                        {
-                            for($j = 0; $j < $ouvrage->visitehebdo; $j++)
-                            {
-                                saisonnier($intervention, $ouvrage, $intervention->ouvrage, $year, $i, $retour[0], $retour[1]);
-                            }
-                        }
-                    }
+                    saisonnier($intervention, $ouvrage, $intervention->ouvrage, $year, $i, $retour[0], $retour[1]);
                     break;
 
                 case 'Semestriel':
