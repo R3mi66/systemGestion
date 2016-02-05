@@ -21,13 +21,16 @@
     //Nombre de semaine dans l'année
     $nbresemaine = date("W", mktime(0,0,0,12,28,$year));
 
-    echo $_POST['intervention'] . '<br><br>';
-    echo $_POST['ouvrage'] . '<br><br>';
-    echo $_POST['cycle']. '<br><br>';
-
     $intervention = $_POST['intervention'];
     $ouvrage = $_POST['ouvrage'];
     $cycle = $_POST['cycle'];
+
+    //Detection des noms de stations
+    if (($ouvrage == "Camelas") OR ($ouvrage == "Mascareil") OR ($ouvrage == "Espira") OR ($ouvrage == "Rivesaltes") OR ($ouvrage == "Corbere") OR ($ouvrage == "Saint Michel") OR ($ouvrage == "Bouleternere") OR ($ouvrage == "Latour") OR ($ouvrage == "Station VDR"))
+    {
+        $intervention = $intervention .'-' . $ouvrage;
+        $ouvrage = "Station";
+    }    
 
     switch ($cycle)
     {
