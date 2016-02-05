@@ -46,9 +46,13 @@
             if (!isset($_GET["page"]) OR ($_GET["page"]==1))
             {
         ?>
-            <!-- Formulaire d'ajout d'une tache -->
-            <div id='formulaire'>
-                <?php include_once('./php/formulaire.php'); ?>
+            <!-- Formulaire d'ajout d'une tache cyclique-->
+            <div id='formulaire_cyclique'>
+                <?php include_once('./php/formulaire_cyclique.php'); ?>
+            </div>
+            <!-- Formulaire d'ajout d'une tache cyclique-->
+            <div id='formulaire_unique'>
+                <?php include_once('./php/formulaire_unique.php'); ?>
             </div>
         <?php
             }

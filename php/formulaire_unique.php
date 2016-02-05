@@ -1,10 +1,10 @@
 <?php
     /*-----------------------------------*/
-    /*           formulaire.php          */
+    /*       formulaire_unique.php       */
     /*-----------------------------------*/
     /*                                   */
     /*      Formulaire d'ajout d'une     */
-    /*                tache              */
+    /*             tache unique          */
     /*                                   */
     /*-----------------------------------*/
 ?>
@@ -19,15 +19,15 @@
 ?>
 
     <!-- Formulaire d'ajout -->
-    <form method="post" action="./php/traitement_formulaire.php">
+    <form method="post" action="./php/traitement_formulaire_unique.php">
         <fieldset>
-            <legend>Ajout d'une intervention cyclique</legend>
+            <legend>Ajout d'une intervention ponctuelle</legend>
             <p>
-                <label for="intervention">Intervention</label> : <input type="text" name="intervention" required />
+                <label for="intervention_unique">Intervention</label> : <input type="text" name="intervention_unique" required />
             </p>
             <p>
-                <label for="ouvrage">Ouvrage</label> : 
-                <select name="ouvrage" id="ouvrage" required />
+                <label for="ouvrage_unique">Ouvrage</label> : 
+                <select name="ouvrage_unique" id="ouvrage_unique" required />
                     <?php
                         while ( $donnees_ouvrage = $list_ouvrage->fetch() )
                         {
@@ -40,15 +40,10 @@
                 </select>
             </p>
             <p>
-                <label for="cycle">Cycle</label> : 
-                <select name="cycle" id="cycle" required />
-                    <?php
-                        while ( $donnees_cycle = $list_cycle->fetch() )
-                        {
-                            echo '<option value="' . $donnees_cycle['nomcycle'] .'">' . $donnees_cycle['nomcycle'] . '</option>';
-                        }
-                    ?>
-                </select>
+                <label for="date_tache_unique">Date de la tache</label> : <input type="date" name="date_tache_unique" required/>
+            </p>
+            <p>
+                <label for="date_max_unique">Date Maximum de réalisation de la tache</label> : <input type="date" name="date_max_unique" required/>
             </p>
             <p>
                 <input type="submit" value="Envoyer" />

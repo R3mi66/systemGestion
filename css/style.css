@@ -30,7 +30,7 @@ body
 	font-size: 0.82em;
 }
 
-#formulaire
+#formulaire_cyclique, #formulaire_unique
 {
 	width:50%;
 	text-align: center;
@@ -38,14 +38,18 @@ body
 	margin-bottom: 20px;
 }
 
-#formulaire p
+#formulaire_cyclique p, #formulaire_unique p
 {
 	display: inline-block;
 	margin-right:15px;
 }
 
-#formulaire label
+#formulaire_cyclique label, #formulaire_unique label
 {
+	font-weight: bold;
+}
+
+legend{
 	font-weight: bold;
 }
 

@@ -28,7 +28,7 @@
     //Detection des noms de stations
     if (($ouvrage == "Camelas") OR ($ouvrage == "Mascareil") OR ($ouvrage == "Espira") OR ($ouvrage == "Rivesaltes") OR ($ouvrage == "Corbere") OR ($ouvrage == "Saint Michel") OR ($ouvrage == "Bouleternere") OR ($ouvrage == "Latour") OR ($ouvrage == "Station VDR"))
     {
-        $intervention = $intervention .'-' . $ouvrage;
+        $intervention = $intervention .' ' . $ouvrage;
         $ouvrage = "Station";
     }    
 
