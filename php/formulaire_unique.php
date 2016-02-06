@@ -23,11 +23,11 @@
         <fieldset>
             <legend>Ajout d'une intervention ponctuelle</legend>
             <p>
-                <label for="intervention_unique">Intervention</label> : <input type="text" name="intervention_unique" required />
+                <label for="intervention_unique">Intervention</label> : <input class="form-control" type="text" name="intervention_unique" required />
             </p>
             <p>
                 <label for="ouvrage_unique">Ouvrage</label> : 
-                <select name="ouvrage_unique" id="ouvrage_unique" required />
+                <select class="form-control" name="ouvrage_unique" id="ouvrage_unique" required />
                     <?php
                         while ( $donnees_ouvrage = $list_ouvrage->fetch() )
                         {
@@ -40,10 +40,10 @@
                 </select>
             </p>
             <p>
-                <label for="date_tache_unique">Date de la tache</label> : <input type="date" name="date_tache_unique" required />
+                <label for="date_tache_unique">Date de la tache</label> : <input class="form-control" type="date" name="date_tache_unique" required />
             </p>
             <p>
-                <label for="date_max_unique">Date Maximum de réalisation de la tache</label> : <input type="date" name="date_max_unique" required />
+                <label for="date_max_unique">Date Maximum de réalisation de la tache</label> : <input class="form-control" type="date" name="date_max_unique" required />
             </p>
             <p>
                 <input class="btn" type="submit" value="Envoyer" />

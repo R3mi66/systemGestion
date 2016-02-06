@@ -23,11 +23,11 @@
         <fieldset>
             <legend>Ajout d'une intervention cyclique</legend>
             <p>
-                <label for="intervention">Intervention</label> : <input type="text" name="intervention" required />
+                <label for="intervention">Intervention</label> : <input class="form-control" type="text" name="intervention" required />
             </p>
             <p>
                 <label for="ouvrage">Ouvrage</label> : 
-                <select name="ouvrage" id="ouvrage" required />
+                <select class="form-control" name="ouvrage" id="ouvrage" required />
                     <?php
                         while ( $donnees_ouvrage = $list_ouvrage->fetch() )
                         {
@@ -41,7 +41,7 @@
             </p>
             <p>
                 <label for="cycle">Cycle</label> : 
-                <select name="cycle" id="cycle" required />
+                <select class="form-control" name="cycle" id="cycle" required />
                     <?php
                         while ( $donnees_cycle = $list_cycle->fetch() )
                         {
