@@ -40,13 +40,13 @@
                 </select>
             </p>
             <p>
-                <label for="date_tache_unique">Date de la tache</label> : <input type="date" name="date_tache_unique" required/>
+                <label for="date_tache_unique">Date de la tache</label> : <input type="date" name="date_tache_unique" required />
             </p>
             <p>
-                <label for="date_max_unique">Date Maximum de réalisation de la tache</label> : <input type="date" name="date_max_unique" required/>
+                <label for="date_max_unique">Date Maximum de réalisation de la tache</label> : <input type="date" name="date_max_unique" required />
             </p>
             <p>
-                <input type="submit" value="Envoyer" />
+                <input class="btn" type="submit" value="Envoyer" />
             </p>
         </fieldset>
     </form>

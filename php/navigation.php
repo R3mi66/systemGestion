@@ -10,6 +10,6 @@
 ?>
 
 <ul>
-	<li><a href="?page=1">Taches en cours</a></li>
-	<li><a href="?page=2">Liste complete</a></li>
+	<li><a class="btn" href="?page=1">Taches en cours</a></li>
+	<li><a class="btn" href="?page=2">Liste complete</a></li>
 </ul>

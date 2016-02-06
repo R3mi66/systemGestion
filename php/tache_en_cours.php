@@ -24,7 +24,7 @@
 	//Liste des taches pour chacun des sites
 	for ($i=0; $i<5; $i++)
 	{
-		echo '<div class=\''. $ouvrage[$i] .'\'>';
+		echo '<div class=\'\'>';
 			$reponse = $base->query('SELECT idtache, nomtache, datemaxtache FROM tache_' . $year . ' WHERE nomtache LIKE \'%'. $ouvrage[$i] .'\' AND datetache <= CURDATE() AND daterealisationtache IS NULL ORDER BY datemaxtache');
 			echo '<table>';
 				echo '<thead><tr><th>Tache '. $ouvrage[$i] .'</th></tr>';
@@ -34,10 +34,10 @@
 						echo '<tr>';
 							if ($donnees['datemaxtache'] < $now)
 							{
-								echo '<td bgcolor=\'#ff6347\'><a href=\'?idtache=' . $donnees['idtache'] . '\'>' . htmlspecialchars($donnees['nomtache']) . '</a></td>';
+								echo '<td bgcolor=\'#ff6347\'><a class="a" href=\'?idtache=' . $donnees['idtache'] . '\'>' . htmlspecialchars($donnees['nomtache']) . '</a></td>';
 							}
 							else{
-								echo '<td><a href=\'?idtache=' . $donnees['idtache'] . '\'>' . htmlspecialchars($donnees['nomtache']) . '</a></td>';
+								echo '<td><a class="a" href=\'?idtache=' . $donnees['idtache'] . '\'>' . htmlspecialchars($donnees['nomtache']) . '</a></td>';
 							}
 
 						echo '</tr>';

@@ -33,37 +33,39 @@
         <!-- Feuille de style -->
         <link rel="stylesheet" href="./css/style.css" />
 
-        <!-- Lien vers Bootstrap 
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>-->
+        <!-- Lien vers Bootstrap -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
     </head>
 
     <!-- Corps de la page-->
     <body>
-        <!-- Barre de Navigation -->
-        <div id='navigation'>
-            <?php include_once('./php/navigation.php'); ?>
-        </div>
-
-        <!-- Determination de l'affichage ou non de la barre formulaire -->
-        <?php
-            if (!isset($_GET["page"]) OR ($_GET["page"]==1))
-            {
-        ?>
-            <!-- Formulaire d'ajout d'une tache cyclique-->
-            <div id='formulaire_cyclique'>
-                <?php include_once('./php/formulaire_cyclique.php'); ?>
+        <div class="container-fluid">
+            <!-- Barre de Navigation -->
+            <div id='navigation'>
+                <?php include_once('./php/navigation.php'); ?>
             </div>
-            <!-- Formulaire d'ajout d'une tache cyclique-->
-            <div id='formulaire_unique'>
-                <?php include_once('./php/formulaire_unique.php'); ?>
-            </div>
-        <?php
-            }
-        ?>
 
-        <!-- Affichage principal -->
-        <div id='affichage'>
-            <?php include_once('./php/affichage.php'); ?>
+            <!-- Determination de l'affichage ou non de la barre formulaire -->
+            <?php
+                if (!isset($_GET["page"]) OR ($_GET["page"]==1))
+                {
+            ?>
+                <!-- Formulaire d'ajout d'une tache cyclique-->
+                <div id='formulaire_cyclique'>
+                    <?php include_once('./php/formulaire_cyclique.php'); ?>
+                </div>
+                <!-- Formulaire d'ajout d'une tache cyclique-->
+                <div id='formulaire_unique'>
+                    <?php include_once('./php/formulaire_unique.php'); ?>
+                </div>
+            <?php
+                }
+            ?>
+
+            <!-- Affichage principal -->
+            <div id='affichage' class="text-center">
+                <?php include_once('./php/affichage.php'); ?>
+            </div>
         </div>
     </body>
 </html>

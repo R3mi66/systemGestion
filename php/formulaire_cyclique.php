@@ -51,7 +51,7 @@
                 </select>
             </p>
             <p>
-                <input type="submit" value="Envoyer" />
+                <input class="btn" type="submit" value="Envoyer" />
             </p>
         </fieldset>
     </form>

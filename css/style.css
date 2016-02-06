@@ -1,7 +1,15 @@
-a
+.a
 {
 	text-decoration:none;
 	color:black;
+}
+
+.a:hover{
+	text-decoration: none;
+}
+
+#affichage{
+	margin-top: 20px;
 }
 
 #affichage td
@@ -61,6 +69,7 @@ legend{
 	text-align: center;
 	margin: auto;
 	margin-bottom: 20px;
+	margin-top:20px;
 }
 
 #navigation li
@@ -69,14 +78,10 @@ legend{
 	margin-right:15px;
 	font-size: 1.2em;
 	font-weight: bold;
-	border-radius: 5px;
 	padding :5px;
 	background-color: #e6e6fa;
+}
+
+.btn{
 	box-shadow: 2px 2px 2px gray;
 }
-
-#navigation li:hover
-{
-	box-shadow: 0.5px 0.5px 0.5px gray;
-}
-
