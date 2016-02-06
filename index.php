@@ -39,28 +39,30 @@
 
     <!-- Corps de la page-->
     <body>
-        <div class="container-fluid">
-            <!-- Barre de Navigation -->
-            <div id='navigation'>
-                <?php include_once('./php/navigation.php'); ?>
-            </div>
+        <div class="container-fluid" style="zoom:75%">
+            <div class="entete">
+                <!-- Barre de Navigation -->
+                <div id='navigation'>
+                    <?php include_once('./php/navigation.php'); ?>
+                </div>
 
-            <!-- Determination de l'affichage ou non de la barre formulaire -->
-            <?php
-                if (!isset($_GET["page"]) OR ($_GET["page"]==1))
-                {
-            ?>
-                <!-- Formulaire d'ajout d'une tache cyclique-->
-                <div id='formulaire_cyclique'>
-                    <?php include_once('./php/formulaire_cyclique.php'); ?>
-                </div>
-                <!-- Formulaire d'ajout d'une tache cyclique-->
-                <div id='formulaire_unique'>
-                    <?php include_once('./php/formulaire_unique.php'); ?>
-                </div>
-            <?php
-                }
-            ?>
+                <!-- Determination de l'affichage ou non de la barre formulaire -->
+                <?php
+                    if (!isset($_GET["page"]) OR ($_GET["page"]==1))
+                    {
+                ?>
+                    <!-- Formulaire d'ajout d'une tache cyclique-->
+                    <div id='formulaire_cyclique'>
+                        <?php include_once('./php/formulaire_cyclique.php'); ?>
+                    </div>
+                    <!-- Formulaire d'ajout d'une tache cyclique-->
+                    <div id='formulaire_unique'>
+                        <?php include_once('./php/formulaire_unique.php'); ?>
+                    </div>
+                <?php
+                    }
+                ?>
+            </div>
 
             <!-- Affichage principal -->
             <div id='affichage' class="text-center">
