@@ -24,7 +24,7 @@
 	//Liste des taches pour chacun des sites
 	for ($i=0; $i<5; $i++)
 	{
-		echo '<div id=\''. $ouvrage[$i] .'\'>';
+		echo '<div class=\''. $ouvrage[$i] .'\'>';
 			$reponse = $base->query('SELECT idtache, nomtache, datemaxtache FROM tache_' . $year . ' WHERE nomtache LIKE \'%'. $ouvrage[$i] .'\' AND datetache <= CURDATE() AND daterealisationtache IS NULL ORDER BY datemaxtache');
 			echo '<table>';
 				echo '<thead><tr><th>Tache '. $ouvrage[$i] .'</th></tr>';

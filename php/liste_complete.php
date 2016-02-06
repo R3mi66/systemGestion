@@ -14,12 +14,12 @@
 	$year = date("Y");
 	$now = date("Y-m-d H:i:s");
 
-	$ouvrage = array ('Agly','Vdr','Vinca','Reseau','Station');
+	$ouvrage = array ('Agly','VDR','Vinca','Reseau','Station');
 
 	//Liste des taches pour chacun des sites
 	for ($i=0; $i<5; $i++)
 	{
-		echo '<div id=\''. $ouvrage[$i] .'\'>';
+		echo '<div class=\''. $ouvrage[$i] .'\'>';
 			$reponse = $base->query('SELECT idtache, nomtache, datemaxtache, daterealisationtache FROM tache_' . $year . ' WHERE nomtache LIKE \'%'. $ouvrage[$i] .'%\' ORDER BY nomtache');
 			echo '<table>';
 				echo '<thead><tr><th>Tache '. $ouvrage[$i] .'</th></tr>';

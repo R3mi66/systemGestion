@@ -32,6 +32,9 @@
 
         <!-- Feuille de style -->
         <link rel="stylesheet" href="./css/style.css" />
+
+        <!-- Lien vers Bootstrap 
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>-->
     </head>
 
     <!-- Corps de la page-->
