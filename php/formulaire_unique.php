@@ -10,7 +10,6 @@
 ?>
 
 <?php
-    global $base;
     //Récupération des informations nécessaires au formulaires
     //Liste des ouvrages
     $list_ouvrage = $base->query('SELECT * FROM ouvrage');

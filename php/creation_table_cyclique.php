@@ -11,9 +11,7 @@
 ?>
 
 <?php
-	global $base;
-
-    //Année en cours
+	//Année en cours
     $year = date("Y");
 
     //Nombre de semaine dans l'année

@@ -10,8 +10,11 @@
 
 <?php
     //Intégration des Fichiers de classes
-    include_once('./class/include.class.php');
-    include_once('./php/connexion_sql.php');
+    include_once('./class/auto_load.php');
+
+    //Connection à la base de données
+    $database = new Database();
+    $base = $database->connection();
 
     //Intégration des fonctions
     include_once('./php/function_cycle.php');
@@ -29,6 +32,9 @@
     <head>
         <meta charset="utf-8" />
         <title>Système de gestion des interventions systématiques</title>
+
+        <!-- Icone dans onglet -->
+        <link rel="shortcut icon" type="image/gif" href="./ressource/icone/iconbrl.gif" />
 
         <!-- Feuille de style -->
         <link rel="stylesheet" href="./css/style.css" />

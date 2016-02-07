@@ -9,9 +9,7 @@
 ?>
 
 <?php
-	global $base;
-
-  //Récupération du numero de la page dans l'adresse de la page
+	//Récupération du numero de la page dans l'adresse de la page
   if (isset($_GET["page"])){
 		$page_aff=$_GET["page"];
 	}

@@ -10,10 +10,17 @@
 ?>
 
 <?php
-    global $base;
-
-    include_once('connexion_sql.php');
+    //Connection à la base de données
+    $database = new Database();
+    $base = $database->connection();
+    
     include_once('function_cycle.php');
+
+    //Chargement du fichier des options
+    if (file_exists("./xml/cyclique.xml"))
+    {
+            $xml=simplexml_load_file("./xml/cyclique.xml");
+    }
 
      //Année en cours
     $year = date("Y");

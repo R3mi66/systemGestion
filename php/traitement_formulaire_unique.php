@@ -11,9 +11,9 @@
 ?>
 
 <?php
-    global $base;
-
-    include_once('connexion_sql.php');
+    //Connection à la base de données
+    $database = new Database();
+    $base = $database->connection();
 
      //Année en cours
     $year = date("Y");
