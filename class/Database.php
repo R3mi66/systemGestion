@@ -17,7 +17,9 @@
 		private $_user;
 		private $_password;
 
-
+		/*-------------------*/
+		/*    Constructeur   */
+		/*-------------------*/
 		public function __construct(){
 			$this->_hote = 'localhost';
 			$this->_databaseName = 'vdr_system_gestion';
@@ -25,10 +27,11 @@
 			$this->_password = 'ktz739fm5g68pb22';
 		}
 
-
+		/*--------------------------------------*/
+		/*    Connection à la base de données   */
+		/*--------------------------------------*/
 		public function connection()
 		{
-			//Connexion à la base de données
 			try
 			{
 				$connect = new PDO('mysql:host=' . $this->_hote .'; dbname=' . $this->_databaseName . ';charset=utf8', '' . $this->_user . '', '' . $this->_password . '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));

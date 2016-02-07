@@ -12,12 +12,12 @@
 <?php
     //Récupération des informations nécessaires au formulaires
     //Liste des ouvrages
-    $list_ouvrage = $base->query('SELECT * FROM ouvrage');
-    //LIste des cycles
-    $list_cycle = $base->query('SELECT * FROM cycle');
+     //Liste des ouvrages
+    $ouvrage = new Ouvrage();
+    $list_ouvrage = $ouvrage->lister($base);
 ?>
 
-    <!-- Formulaire d'ajout -->
+    <!-- Formulaire d'ajout d'une tache ponctuelle -->
     <form method="post" action="./php/traitement_formulaire_unique.php">
         <fieldset>
             <legend>Ajout d'une intervention ponctuelle</legend>
@@ -30,10 +30,7 @@
                     <?php
                         while ( $donnees_ouvrage = $list_ouvrage->fetch() )
                         {
-                            if ($donnees_ouvrage['nomouvrage'] != "Station")
-                            {
-                                echo '<option value="' . $donnees_ouvrage['nomouvrage'] .'">' . $donnees_ouvrage['nomouvrage'] . '</option>';
-                            }
+                            echo '<option value="' . $donnees_ouvrage['nomouvrage'] .'">' . $donnees_ouvrage['nomouvrage'] . '</option>';
                         }
                     ?>
                 </select>
@@ -42,7 +39,7 @@
                 <label for="date_tache_unique">Date de la tache</label> : <input class="form-control" type="date" name="date_tache_unique" required />
             </p>
             <p>
-                <label for="date_max_unique">Date Maximum de réalisation de la tache</label> : <input class="form-control" type="date" name="date_max_unique" required />
+                <label for="date_max_unique">Date Limite de réalisation</label> : <input class="form-control" type="date" name="date_max_unique" required />
             </p>
             <p>
                 <input class="btn" type="submit" value="Envoyer" />

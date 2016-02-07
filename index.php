@@ -9,21 +9,21 @@
 ?>
 
 <?php
-    //Intégration des Fichiers de classes
+    //Chargement de la fonction d'auto-chargement des classes
     include_once('./class/auto_load.php');
 
     //Connection à la base de données
     $database = new Database();
     $base = $database->connection();
 
+    //Traitement effectué au chargement de l'application
+    include_once('./php/demarrage.php');
+
     //Intégration des fonctions
     include_once('./php/function_cycle.php');
 
     //Intégration de fonctions annexes au serveur
     include_once('./php/creation_table_cyclique.php');
-
-    //Intégration des fonctions traitées au démarrage
-    include_once('./php/demarrage.php');
 ?>
 
 <!DOCTYPE html>

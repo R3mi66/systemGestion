@@ -12,12 +12,14 @@
 <?php
     //Récupération des informations nécessaires au formulaires
     //Liste des ouvrages
-    $list_ouvrage = $base->query('SELECT * FROM ouvrage');
-    //LIste des cycles
-    $list_cycle = $base->query('SELECT * FROM cycle');
+    $ouvrage = new Ouvrage();
+    $list_ouvrage = $ouvrage->lister($base);
+    //Liste des cycles
+    $cycle = new Cycle();
+    $list_cycle = $cycle->lister($base);
 ?>
 
-    <!-- Formulaire d'ajout -->
+    <!-- Formulaire d'ajout d'une tache cyclique -->
     <form method="post" action="./php/traitement_formulaire.php">
         <fieldset>
             <legend>Ajout d'une intervention cyclique</legend>
@@ -30,10 +32,7 @@
                     <?php
                         while ( $donnees_ouvrage = $list_ouvrage->fetch() )
                         {
-                            if ($donnees_ouvrage['nomouvrage'] != "Station")
-                            {
-                                echo '<option value="' . $donnees_ouvrage['nomouvrage'] .'">' . $donnees_ouvrage['nomouvrage'] . '</option>';
-                            }
+                            echo '<option value="' . $donnees_ouvrage['nomouvrage'] .'">' . $donnees_ouvrage['nomouvrage'] . '</option>';
                         }
                     ?>
                 </select>

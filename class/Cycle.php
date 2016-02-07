@@ -1,35 +1,35 @@
 <?php
     /*-----------------------------------*/
-    /*            Ouvrage.php            */
+    /*             Cycle.php             */
     /*-----------------------------------*/
     /*                                   */
     /*      Traitement de la classe      */
-    /*             "ouvrage"             */
+    /*              "cycle"              */
     /*                                   */
     /*-----------------------------------*/
 ?>
 
 <?php
-	class Ouvrage
+	class Cycle
 	{
-		private $_idOuvrage;
-		private $_nomOuvrage;
+		private $_idCycle;
+		private $_nomCycle;
 
 		/*-------------------*/
 		/*    Constructeur   */
 		/*-------------------*/
 		public function __construct()
 		{
-			$this->_idOuvrage = '';
-			$this->_nomOuvrage = '';
+			$this->_idCycle = '';
+			$this->_nomCycle = '';
 		}
 
 		/*------------------------------------------------------*/
-		/*    Listing de la totalité des ouvrages de la table   */
+		/*    Listing de la totalité des cycles de la table   */
 		/*------------------------------------------------------*/
 		public function lister($base)
 		{
-			return $base->query('SELECT * FROM ouvrage');
+			return $base->query('SELECT * FROM cycle');
 		}
 	}
 ?>
