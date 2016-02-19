@@ -16,6 +16,8 @@
     $database = new Database();
     $base = $database->connection();
 
+    
+
     //Traitement effectué au chargement de l'application
     include_once('./php/demarrage.php');
 

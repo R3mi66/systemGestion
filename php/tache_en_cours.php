@@ -32,10 +32,10 @@
 						echo '<tr>';
 							if ($donnees['datemaxtache'] < $now)
 							{
-								echo '<td bgcolor=\'#ff6347\'><a class="a" href=\'?idtache=' . $donnees['idtache'] . '\'>' . htmlspecialchars($donnees['nomtache']) . '</a></td>';
+								echo '<td bgcolor=\'#ff6347\'><a class="a" href=\'?idtache=' . $donnees['idtache'] . '\' onclick="return confirm(\'Etes vous sûre de vouloir valider cette intervention ?\');">' . htmlspecialchars($donnees['nomtache']) . '</a></td>';
 							}
 							else{
-								echo '<td><a class="a" href=\'?idtache=' . $donnees['idtache'] . '\'>' . htmlspecialchars($donnees['nomtache']) . '</a></td>';
+								echo '<td><a class="a" href=\'?idtache=' . $donnees['idtache'] . '\' onclick="return confirm(\'Etes vous sûre de vouloir supprimer cette intervention \');">' . htmlspecialchars($donnees['nomtache']) . '</a></td>';
 							}
 
 						echo '</tr>';

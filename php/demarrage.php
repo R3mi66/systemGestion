@@ -10,13 +10,15 @@
 ?>
 
 <?php
-	//Chargement du fichier des options
+  //Chargement et Action sur les différentes options de l'application transmises par le fichier option.xml
+	//Vérification de l'existence du fichier des options
 	if (file_exists("./xml/option.xml"))
 	{
-		    $xml=simplexml_load_file("./xml/option.xml");
+      //Chargement du fichier des options
+		  $xml=simplexml_load_file("./xml/option.xml");
 	}
 
-	//Traitement des données
+	//Traitement des données de Date
 	$day = date("d");
 	$month = date("m");
 	$year = date("Y");
@@ -36,9 +38,17 @@
   	$xml->datetime->day = $day;
   }
 
-  //Sauvegarde des modifications du fichier d'option
+  //Ouverture du fichier
   $fe = fopen("./xml/option.xml", "w+" );
-	fwrite($fe, $xml->saveXML(), strlen($xml->saveXML()));
 
+	//Sauvegarde des modifications du fichier d'option
+  fwrite($fe, $xml->saveXML(), strlen($xml->saveXML()));
+
+  //Fermeture du fichier
 	fclose($fe);
+
+
+  //Vérification de l'existence de la table nécessaire au fonctionnement de l'application + Création si nécessaire
+  //Vérification Existence de la table tache[xxxx]
+  
 ?>

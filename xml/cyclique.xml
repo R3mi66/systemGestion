@@ -2,7 +2,7 @@
 <CYCLIQUE>
 	<!-- Barrage de Vinça -->
 	<intervention>Essai Sirene<ouvrage>Vinca</ouvrage><cycle>Trimestriel</cycle></intervention>
-	<intervention>Essai Non Sonore Sire	ne<ouvrage>Vinca</ouvrage><cycle>2mois/3</cycle></intervention>
+	<intervention>Essai Non Sonore Sirene<ouvrage>Vinca</ouvrage><cycle>2mois/3</cycle></intervention>
 	<intervention>Visite d Ouvrage<ouvrage>Vinca</ouvrage><cycle>Hebdomadaire</cycle></intervention>
 	<intervention>Essai Groupe Electrogene Fixe<ouvrage>Vinca</ouvrage><cycle>Hebdomadaire</cycle></intervention>
 	<intervention>Essai Groupe Electrogene Mobile<ouvrage>Vinca</ouvrage><cycle>Hebdomadaire</cycle></intervention>

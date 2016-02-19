@@ -34,10 +34,10 @@
     //Fonctions des différents cycle
 	function trimestriel($intervention, $ouvrage, $year)
 	{
-		$base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Mars - ' . $ouvrage . '\', \'' . $year . '-03-01 00:00:00\', \'' . $year . '-03-31 23:59:59\', NULL, NULL)');
-        $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Juin - ' . $ouvrage . '\', \'' . $year . '-06-01 00:00:00\', \'' . $year . '-06-30 23:59:59\', NULL, NULL)');
-        $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Septembre - ' . $ouvrage . '\', \'' . $year . '-09-01 00:00:00\', \'' . $year . '-09-30 23:59:59\', NULL, NULL)');
-        $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Decembre - ' . $ouvrage . '\', \'' . $year . '-12-01 00:00:00\', \'' . $year . '-12-31 23:59:59\', NULL, NULL)');
+		$base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - 1er Trimestre - ' . $ouvrage . '\', \'' . $year . '-01-01 00:00:00\', \'' . $year . '-03-31 23:59:59\', NULL, NULL)');
+        $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - 2nd Trimestre - ' . $ouvrage . '\', \'' . $year . '-04-01 00:00:00\', \'' . $year . '-06-30 23:59:59\', NULL, NULL)');
+        $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - 3eme Trimestre - ' . $ouvrage . '\', \'' . $year . '-07-01 00:00:00\', \'' . $year . '-09-30 23:59:59\', NULL, NULL)');
+        $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - 4eme Trimestre - ' . $ouvrage . '\', \'' . $year . '-10-01 00:00:00\', \'' . $year . '-12-31 23:59:59\', NULL, NULL)');
 	}
 
 	function mois3($intervention, $ouvrage, $year)
