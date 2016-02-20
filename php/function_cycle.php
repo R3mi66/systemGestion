@@ -10,7 +10,7 @@
 ?>
 
 <?php
-	//Fonction de calcul de la date du lundi et vendredi de chaque semaine de l'année
+    //Fonction de calcul de la date du lundi et vendredi de chaque semaine de l'année
     function get_monday_friday_week($week, $year, $format = "Y-m-d")
     {
         $firstDayinYear = date("N", mktime(0, 0, 0, 1, 1, $year));
@@ -34,6 +34,9 @@
     //Fonctions des différents cycle
 	function trimestriel($intervention, $ouvrage, $year)
 	{
+        $database = new Database();
+    $base = $database->connection();
+
 		$base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - 1er Trimestre - ' . $ouvrage . '\', \'' . $year . '-01-01 00:00:00\', \'' . $year . '-03-31 23:59:59\', NULL, NULL)');
         $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - 2nd Trimestre - ' . $ouvrage . '\', \'' . $year . '-04-01 00:00:00\', \'' . $year . '-06-30 23:59:59\', NULL, NULL)');
         $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - 3eme Trimestre - ' . $ouvrage . '\', \'' . $year . '-07-01 00:00:00\', \'' . $year . '-09-30 23:59:59\', NULL, NULL)');
@@ -42,6 +45,9 @@
 
 	function mois3($intervention, $ouvrage, $year)
 	{
+        $database = new Database();
+    $base = $database->connection();
+
 		$base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Janvier - ' . $ouvrage . '\', \'' . $year . '-01-01 00:00:00\', \'' . $year . '-01-31 23:59:59\', NULL, NULL)');
         $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Fevrier - ' . $ouvrage . '\', \'' . $year . '-02-01 00:00:00\', \'' . $year . '-02-28 23:59:59\', NULL, NULL)');
         $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Avril - ' . $ouvrage . '\', \'' . $year . '-04-01 00:00:00\', \'' . $year . '-04-30 23:59:59\', NULL, NULL)');
@@ -54,11 +60,17 @@
 
 	function hebdomadaire($intervention, $ouvrage, $year, $i, $lundi, $vendredi)
 	{
+        $database = new Database();
+    $base = $database->connection();
+
 		$base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Semaine ' . $i . ' - ' . $ouvrage . '\', \'' . $lundi . ' 00:00:00\', \'' . $vendredi  . ' 23:59:59\', NULL, NULL)');
 	}
 
 	function mensuel($intervention, $ouvrage, $year)
 	{
+        $database = new Database();
+    $base = $database->connection();
+
 		$base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Janvier - ' . $ouvrage . '\', \'' . $year . '-01-01 00:00:00\', \'' . $year . '-01-31 23:59:59\', NULL, NULL)');
         $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Février - ' . $ouvrage . '\', \'' . $year . '-02-01 00:00:00\', \'' . $year . '-02-28 23:59:59\', NULL, NULL)');
         $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Mars - ' . $ouvrage . '\', \'' . $year . '-03-01 00:00:00\', \'' . $year . '-03-31 23:59:59\', NULL, NULL)');
@@ -73,18 +85,27 @@
         $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Mois de Decembre - ' . $ouvrage . '\', \'' . $year . '-12-01 00:00:00\', \'' . $year . '-12-31 23:59:59\', NULL, NULL)');
 	}
 
-	function saisonnier($intervention, $station, $ouvrage, $year, $i, $lundi, $vendredi)
+	function saisonnier($intervention, $ouvrage, $year, $i, $lundi, $vendredi)
 	{
-		$base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'Visite Station' . $station .' - Semaine ' . $i . ' - ' . $ouvrage . '\', \'' . $lundi . ' 00:00:00\', \'' . $vendredi  . ' 23:59:59\', NULL, NULL)');
+        $database = new Database();
+    $base = $database->connection();
+
+		$base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'Visite Station - Semaine ' . $i . ' - ' . $ouvrage . '\', \'' . $lundi . ' 00:00:00\', \'' . $vendredi  . ' 23:59:59\', NULL, NULL)');
 	}
 
 	function annuel($intervention, $ouvrage, $year)
 	{
+        $database = new Database();
+    $base = $database->connection();
+
 		$base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Année ' . $year . ' - ' . $ouvrage . '\', \'' . $year . '-01-01 00:00:00\', \'' . $year . '-12-10 23:59:59\', NULL, NULL)');
 	}
 
 	function semestriel($intervention, $ouvrage, $year)
 	{
+        $database = new Database();
+    $base = $database->connection();
+
 		$base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - 1er Semestre - ' . $ouvrage . '\', \'' . $year . '-01-01 00:00:00\', \'' . $year . '-06-30 23:59:59\', NULL, NULL)');
         $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - 2eme Semestre - ' . $ouvrage . '\', \'' . $year . '-07-01 00:00:00\', \'' . $year . '-12-31 23:59:59\', NULL, NULL)');
     }
@@ -92,6 +113,9 @@
 
     function semaine2($intervention, $ouvrage, $year, $i, $lundi, $vendredi)
     {   
+        $database = new Database();
+    $base = $database->connection();
+    
         $base->query('INSERT INTO tache_' . $year . ' VALUES (NULL, \'' . $intervention . ' - Semaine ' . $i . ' - ' . $ouvrage . '\', \'' . $lundi . ' 00:00:00\', \'' . $vendredi  . ' 23:59:59\', NULL, NULL)');
     }               
 ?>

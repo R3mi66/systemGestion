@@ -12,16 +12,20 @@
 <?php
 	class Tache
 	{
-		private $_idOuvrage;
-		private $_nomOuvrage;
+		private $_idTache;
+		private $_nomTache;
+		private $_dateTache;
+		private $_dateMaxTache;
+		private $_dateRealisationTache;
+		private $_commentaire;
 
 		/*-------------------*/
 		/*    Constructeur   */
 		/*-------------------*/
 		public function __construct()
 		{
-			$this->_idOuvrage = '';
-			$this->_nomOuvrage = '';
+			$this->_idTache = '';
+			$this->_nomTache = $this->_dateTache = $this->_dateMaxTache = $this->_dateRealisationTache = $this->_commentaire = '';
 		}
 
 		/*-------------------------------------------------*/
