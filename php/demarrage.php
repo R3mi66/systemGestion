@@ -49,6 +49,15 @@
 
 
   //Vérification de l'existence de la table nécessaire au fonctionnement de l'application + Création si nécessaire
-  //Vérification Existence de la table tache[xxxx]
-  
+  //Vérification de l'existence de la table tache[xxxx]
+  //Requête de récupération des données
+  $reponse = $base->query('SHOW TABLES FROM vdr_system_gestion LIKE \'tache_'. $year . '\'');
+  $donnees = $reponse->rowCount();
+
+  //Si $donnees est vide alors creation de la table
+  if ($donnees == 0)
+  {
+    $tache = new Tache();
+    $tache->creer($base);
+  }
 ?>

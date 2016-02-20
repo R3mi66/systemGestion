@@ -16,7 +16,7 @@
     $database = new Database();
     $base = $database->connection();
 
-    
+
 
     //Traitement effectué au chargement de l'application
     include_once('./php/demarrage.php');
@@ -25,7 +25,7 @@
     include_once('./php/function_cycle.php');
 
     //Intégration de fonctions annexes au serveur
-    include_once('./php/creation_table_cyclique.php');
+    //include_once('./php/creation_table_cyclique.php');
 ?>
 
 <!DOCTYPE html>
