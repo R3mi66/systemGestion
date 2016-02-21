@@ -81,6 +81,16 @@
       $nom_ouvrage = $donnees['nom_ouvrage'];
       $nom_cycle = $donnees['nom_cycle'];
 
+      if (($nom_ouvrage == 'Camelas') OR ($nom_ouvrage == 'Mascareil') OR ($nom_ouvrage == 'Corbere') OR ($nom_ouvrage == 'Bouleternere') OR ($nom_ouvrage == 'Saint Michel') OR ($nom_ouvrage == 'Espira') OR ($nom_ouvrage == 'Rivesaltes') OR ($nom_ouvrage == 'Latour'))
+      {
+        $nom_intervention = $nom_intervention . ' - Station ' . $nom_ouvrage;
+      }
+
+      if ($nom_ouvrage == 'Station VDR')
+      {
+        $nom_intervention = $nom_intervention . ' - ' . $nom_ouvrage;
+      }
+
       switch ($nom_cycle)
       {
         case 'Trimestriel':
@@ -104,7 +114,7 @@
           break;
 
         case 'Saisonnier':
-          for ($i = 1; $i < $nbresemaine+1; $i++)
+          for ($i = $debutcampagne; $i < $fincampagne+1; $i++)
           {
             $retour = get_monday_friday_week($i, $year);
             saisonnier($nom_intervention, $nom_ouvrage, $year, $i, $retour[0], $retour[1]);
