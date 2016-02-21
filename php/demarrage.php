@@ -104,7 +104,11 @@
           break;
 
         case 'Saisonnier':
-          saisonnier($nom_intervention, $nom_ouvrage, $year, $i, $retour[0], $retour[1]);
+          for ($i = 1; $i < $nbresemaine+1; $i++)
+          {
+            $retour = get_monday_friday_week($i, $year);
+            saisonnier($nom_intervention, $nom_ouvrage, $year, $i, $retour[0], $retour[1]);
+          }
           break;
 
         case 'Semestriel':
