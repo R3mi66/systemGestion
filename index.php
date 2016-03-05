@@ -17,14 +17,11 @@
     $base = $database->connection();
 
 
-     //Intégration des fonctions
+    //Intégration des fonctions annexes
     include_once('./php/function_cycle.php');
 
     //Traitement effectué au chargement de l'application
     include_once('./php/demarrage.php');
-
-    //Intégration de fonctions annexes au serveur
-    //include_once('./php/creation_table_cyclique.php');
 ?>
 
 <!DOCTYPE html>

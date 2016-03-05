@@ -94,52 +94,52 @@
       switch ($nom_cycle)
       {
         case 'Trimestriel':
-          trimestriel($nom_intervention, $nom_ouvrage, $year);
-           break;
+          $tache->trimestriel($base, $nom_intervention, $nom_ouvrage, $year);
+          break;
 
         case '2mois/3':
-          mois3($nom_intervention, $nom_ouvrage, $year);
+          $tache->mois3($base, $nom_intervention, $nom_ouvrage, $year);
           break;
 
         case 'Hebdomadaire':
           for ($i = 1; $i < $nbresemaine+1; $i++)
           {
             $retour = get_monday_friday_week($i, $year);
-            hebdomadaire($nom_intervention, $nom_ouvrage, $year, $i, $retour[0], $retour[1]);
+            $tache->hebdomadaire($base, $nom_intervention, $nom_ouvrage, $year, $i, $retour[0], $retour[1]);
           }
           break;
 
         case 'Mensuel':
-          mensuel($nom_intervention, $nom_ouvrage, $year);
+          $tache->mensuel($base, $nom_intervention, $nom_ouvrage, $year);
           break;
 
         case 'Saisonnier':
           for ($i = $debutcampagne; $i < $fincampagne+1; $i++)
           {
             $retour = get_monday_friday_week($i, $year);
-            saisonnier($nom_intervention, $nom_ouvrage, $year, $i, $retour[0], $retour[1]);
+            $tache->saisonnier($base, $nom_intervention, $nom_ouvrage, $year, $i, $retour[0], $retour[1]);
           }
           break;
 
         case 'Semestriel':
-          semestriel($nom_intervention, $nom_ouvrage, $year);
+          $tache->semestriel($base, $nom_intervention, $nom_ouvrage, $year);
           break;
 
         case 'Annuel':
-          annuel($nom_intervention, $nom_ouvrage, $year);
+          $tache->annuel($base, $nom_intervention, $nom_ouvrage, $year);
           break;
 
         case 'Annuelp':
           if ( $year%2 == 0 )
           {
-            annuel($nom_intervention, $nom_ouvrage, $year);
+            $tache->annuel($base, $nom_intervention, $nom_ouvrage, $year);
           }
           break;
 
         case 'Annueli':
           if ( $year%2 != 0 )
           {
-            annuel($nom_intervention, $nom_ouvrage, $year);
+            $tache->annuel($base, $nom_intervention, $nom_ouvrage, $year);
           }
           break;
 
@@ -198,7 +198,7 @@
             {
               $retour = get_monday_friday_week($i, $year);
 
-              semaine2($nom_intervention, $nom_ouvrage, $year, $i, $retour[0], $retour[1]);
+              $tache->semaine2($base, $nom_intervention, $nom_ouvrage, $year, $i, $retour[0], $retour[1]);
             }
           }
           break;
